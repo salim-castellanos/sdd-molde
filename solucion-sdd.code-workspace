@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "solucion-sdd · plantilla SDD (docs = conocimiento, apps = código)",
+      "path": "."
+    }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "bierner.markdown-mermaid",
+      "yzhang.markdown-all-in-one"
+    ]
+  }
+}

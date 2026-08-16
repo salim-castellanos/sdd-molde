@@ -1,0 +1,9 @@
+---
+description: Puntero — workspace autoexplicable vía AGENTS.md
+globs: "{.vscode/**,*.code-workspace,**/AGENTS.md}"
+alwaysApply: false
+---
+
+# Puntero
+
+Card `docs/01-steering/ide.md`. No dupliques el proceso en `.kiro/` ni en `CLAUDE.md`.

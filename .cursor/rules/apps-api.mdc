@@ -1,0 +1,9 @@
+---
+description: Puntero — api
+globs: apps/api/**/*
+alwaysApply: false
+---
+
+# Puntero
+
+`apps/api/AGENTS.md` y, si aplica, card `tech` → `docs/01-steering/context/tech.md`.

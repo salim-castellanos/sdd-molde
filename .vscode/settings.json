@@ -1,0 +1,37 @@
+{
+  "window.title": "solucion-sdd — plantilla SDD",
+  "workbench.startupEditor": "readme",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.mdc": "markdown",
+    "AGENTS.md": "markdown"
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.pnpm-store": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+  "files.exclude": {
+    "**/.git": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "spec.md": "plan.md, tasks.md",
+    "AGENTS.md": "",
+    "runbook.md": ""
+  },
+  "markdown.preview.breaks": true,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    }
+  }
+}

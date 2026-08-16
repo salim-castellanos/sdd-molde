@@ -1,0 +1,9 @@
+---
+description: Puntero — web
+globs: apps/web/**/*
+alwaysApply: false
+---
+
+# Puntero
+
+`apps/web/AGENTS.md`. Rutas = `docs/04-design/screens.md`.

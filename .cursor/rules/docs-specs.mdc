@@ -1,0 +1,9 @@
+---
+description: Puntero — docs se rigen por AGENTS.md anidados
+globs: docs/**/*.md
+alwaysApply: false
+---
+
+# Puntero
+
+Sigue el `AGENTS.md` de `docs/` y el de la subcarpeta. Templates en `docs/08-templates/`.
