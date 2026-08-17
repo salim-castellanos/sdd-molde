@@ -35,5 +35,5 @@ npm-debug.log*
 tmp/
 .cache/
 
-# Instancia Mutuo: repo git propio (no se versiona en el molde)
+# Instancia Mistratos: repo git propio (no se versiona en el molde)
 /example/

@@ -9,7 +9,7 @@ Inventario. Si no está aquí, no se inventa un kit.
 | InlineError | sí | bajo el campo | — |
 | FormError | sí | arriba del form | — |
 | Link | sí | login↔register, forgot | — |
-| PageAuth (layout) | sí | columnas auth | — |
+| PageAuth (layout) | sí | columnas auth | según `04-patrones` Auth: columna **o** split |
 | DataTable | sí (admin users) | `/app/users` | [RELLENAR vacío] |
 | Modal | no | — | no usar en auth |
 | Toast | no | — | [RELLENAR] |

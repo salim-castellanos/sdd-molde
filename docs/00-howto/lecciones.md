@@ -2,9 +2,9 @@
 
 Inbox del molde. Card: `docs/01-steering/lecciones.md`. No es `example/GAPS.md`.
 
-`inbox` = aún no está en un gate/loop. `promoted` = la regla ya vive en el destino; no re-cuentes el incidente. `instance` = solo Mutuo (`example/LECCIONES.md`).
+`inbox` = aún no está en un gate/loop. `promoted` = la regla ya vive en el destino; no re-cuentes el incidente. `instance` = solo la instancia (`example/LECCIONES.md`).
 
-Origen de esta tabla: cierre del runbook `001-cuenta` (Mutuo, HU-000).
+Origen de esta tabla: cierre del runbook `001-cuenta` (Mistratos, HU-000).
 
 | id | Corte | Síntoma | Regla | Destino | Status |
 | --- | --- | --- | --- | --- | --- |

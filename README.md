@@ -14,7 +14,7 @@ Quien quiere construir con un agente (Cursor, Kiro, Copilot, Claude Code, …) y
 
 - Un workspace listo: documentación, catálogos y huecos de `apps/`, no una carpeta vacía.
 - Un método único, portable: `AGENTS.md` + `docs/`. No un cerebro por herramienta.
-- Una instancia con el **mismo árbol** en `example/`: **otro git** (Mutuo). En este disco vive al lado del molde; no viaja en el clone del molde. Los huecos vuelven vía `example/GAPS.md`.
+- Una instancia con el **mismo árbol** en `example/`: **otro git** (Mistratos). En este disco vive al lado del molde; no viaja en el clone del molde. Los huecos vuelven vía `example/GAPS.md`.
 - Monorepo al empezar; cada app se puede extraer a un git submodule después.
 
 ## Inicio rápido
@@ -64,7 +64,7 @@ Qué entra en una spec: [docs/01-steering/especificacion.md](docs/01-steering/es
 | `STATUS.md` | Informe ejecutivo (rollup) |
 | `docs/` | Conocimiento: steering, gates, arch, diseño, HUs, specs, runbooks |
 | `apps/` | Artefactos de **tu** fork (vacíos en el molde) |
-| `example/` | Instancia Mutuo; **repo independiente** (gitignored aquí) |
+| `example/` | Instancia Mistratos; **repo independiente** (gitignored aquí) |
 
 Índice de documentación: [docs/README.md](docs/README.md).
 

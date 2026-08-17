@@ -2,7 +2,7 @@
 
 ## Qué es
 
-`example/` es el **mismo árbol** que la raíz y un **repo git aparte** (Mutuo). En el disco del molde vive en esa carpeta; no entra al git de la raíz. El método (howto, gates, templates, cards) no se copia: se apunta al molde (`../docs/`).
+`example/` es el **mismo árbol** que la raíz y un **repo git aparte** (Mistratos). En el disco del molde vive en esa carpeta; no entra al git de la raíz. El método (howto, gates, templates, cards) no se copia: se apunta al molde (`../docs/`).
 
 ```text
 molde (raíz)           --estructura y método-->  example/

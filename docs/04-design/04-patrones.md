@@ -14,7 +14,18 @@ Estados: `idle` | `submitting` | `field-error` | `server-error` | `success`.
 
 ## Auth layout
 
-Una columna, heading, form, un párrafo de ayuda, links secundarios. Sin aside.
+Dos modos. Elige **uno** y déjalo escrito. “Sin aside” solo aplica al primero.
+
+1. **Arquetipo / sin puerta de marca** (Clave v0): una columna, heading, form, un párrafo de ayuda, links secundarios. Lienzo, `--auth-max`. Sin aside.
+2. **Hay puerta pública con atmósfera:** auth es **continuación**, no otro producto. Partido ≥ breakpoint (escena | form) o franja + form. Rutas `/login` y `/register`. No modal si Modal no está en el inventario.
+
+[RELLENAR: 1 o 2. Si es 2: qué va a la izquierda (foto, color, una línea de producto).]
+
+Promesas bajo el H1: **una frase por línea**. El H1 no repite el wordmark si el lockup ya está en la vista.
+
+## Landing (si hay puerta `/`)
+
+[RELLENAR: capítulos a viewport; **un trabajo por capítulo**. El preview se ve como el producto (no *Ejemplo*). Kit HTML primero (`kit/landing.html` o equivalente), luego `apps/web`.]
 
 ## Página protegida
 

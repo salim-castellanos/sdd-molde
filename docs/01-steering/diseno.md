@@ -24,3 +24,4 @@ Solo API / seeds sin pantalla. No abras el kit entero para una fila de `screens.
 2. Kit: `01`–`04` (+ `05-icono` si hay marca) y, si existe, `kit/index.html`.
 3. `screens.md` — **una** fila al componer.
 4. `auth-flows.md` si es identidad. `04-patrones.md` si hay form.
+5. Iterar **puerta, login o registro:** `01-principios.md` (anti-patrones de atmósfera / oficio de puerta) + el patrón Auth/Landing en `04` + el HTML del kit de **esa** pantalla. No inventar overlay si Modal no está en el inventario y las rutas existen.

@@ -15,7 +15,7 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | structure | dónde va un archivo, nombres, monorepo | [structure.md](structure.md) | [context/structure.md](context/structure.md) |
 | arquitectura | NFR, estilo, IAM, config, C4, ADR | [arquitectura.md](arquitectura.md) | `docs/03-architecture/catalog.md` + **un** archivo |
 | formularios | validar inputs, errores de campo, Zod | [formularios.md](formularios.md) | `docs/04-design/ui-notes.md` + context/tech |
-| diseño | pantallas, tokens, patrones, a11y | [diseno.md](diseno.md) | `docs/04-design/catalog.md` + **un** archivo |
+| diseño | pantallas, tokens, patrones, a11y, landing, ilustraciones, “se ve mal” | [diseno.md](diseno.md) | `docs/04-design/catalog.md` + **un** archivo |
 | historia | módulo, épica, feature, HU | [historia.md](historia.md) | `docs/05-backlog/catalog.md` + **una** HU |
 | especificacion | cómo se **compone** una spec y a partir de qué | [especificacion.md](especificacion.md) | HU + diseño + arch + gates |
 | carga | qué spec/HU/doc abrir ahora (no todas) | [carga.md](carga.md) | runbook activo + esta tabla |
