@@ -4,7 +4,7 @@ Copia. No inventes formato.
 
 | Template | Destino |
 | --- | --- |
-| [epic.md](epic.md) | `docs/05-stories/NN-modulo/E-NNN-slug/epic.md` |
+| [epic.md](epic.md) | `docs/05-backlog/NN-modulo/E-NNN-slug/epic.md` |
 | [feature.md](feature.md) | `…/F-NNN-slug/feature.md` |
 | [story.md](story.md) | `…/F-NNN-slug/HU-NNN-slug.md` |
 | [spec.md](spec.md) | `docs/06-specs/NNN-slug/` |

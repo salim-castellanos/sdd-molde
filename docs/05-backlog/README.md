@@ -1,4 +1,4 @@
-# 05 — Historias
+# 05 — Backlog
 
 Empieza por el [catálogo](catalog.md). Jerarquía: módulo → épica → feature → HU.
 

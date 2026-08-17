@@ -15,3 +15,5 @@ No implementes producto en `example/` sin que quien itera lo pida (arquitectura 
 ## Devolver una mejora
 
 Card `example`. Gap en `GAPS.md` + parche al molde en el mismo turno.
+
+Dolores de **ejecución** (puertos, URL, Compose huérfano): card `lecciones`, no otra fila GAPS salvo que falte un concepto del molde.

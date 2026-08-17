@@ -6,10 +6,11 @@ Estás en el conocimiento, no en el código. El informe ejecutivo del producto e
 | --- | --- | --- |
 | `00-howto/` | Cómo usar la plantilla | Producto Clave |
 | `01-steering/` | `catalog.md` (padre) + cards | Enciclopedia: el detalle está en `context/` o en 03/04 |
+| `01-steering/` | `catalog.md` (padre) + cards | Enciclopedia: el detalle está en `context/` o en 03/04 |
 | `02-gates/` | Constitución y G0–G5 | Steering |
 | `03-architecture/` | Catálogo + AF/NFR/estilos/IAM/config/C4/ADR | Spec de una HU |
 | `04-design/` | Catálogo + principios/tokens/componentes/patrones | Código React |
-| `05-stories/` | Catálogo; módulo → épica → feature → HU | Ejecutable |
+| `05-backlog/` | Catálogo; módulo → épica → feature → HU | Ejecutable |
 | `06-specs/` | Specs **compuestas** | Punto de partida |
 | `07-runbooks/` | Secuencia + estado + % | Una spec larga |
 | `08-templates/` | Formato para copiar | Instancias |

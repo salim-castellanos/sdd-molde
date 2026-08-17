@@ -23,14 +23,14 @@ Implementar. Eso es spec + runbook.
 
 ## Cómo se crea
 
-1. `docs/05-stories/catalog.md` — ¿qué módulo?
+1. `docs/05-backlog/catalog.md` — ¿qué módulo?
 2. Épica / feature si no existen (`docs/08-templates/epic.md`, `feature.md`).
 3. HU bajo `…/F-NNN-slug/HU-NNN-slug.md`. `needs` + `screen`.
-4. Fila en el catálogo de stories.
+4. Fila en el catálogo del backlog.
 5. El runbook ordena compose/implement (la dependencia primero).
 
 ## Si aplica, cargar
 
-- `docs/05-stories/catalog.md`
+- `docs/05-backlog/catalog.md`
 - La HU concreta, no el módulo entero
 - Template `docs/08-templates/story.md` si es nueva

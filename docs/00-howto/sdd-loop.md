@@ -72,8 +72,10 @@ Spec en `spec-ready`. Lee la spec, no la HU. Card `tech` solo si toca stack. G2.
 
 ### Implement
 
-Runbook en `implement` y spec `task-ready`. Si no, detente. Solo esas tasks. Escribe y corre la batería que la spec nombró (unit / integración / e2e). Curl no cierra G4. Actualiza `step` y `progress`. Reescribe `STATUS.md`.
+Runbook en `implement` y spec `task-ready`. Si no, detente. Si el humano pidió **ejecutar el runbook**, recorre desde el paso corriente hasta cerrar: pasa el frontmatter a `implement` **antes** de mutar `apps/` (npm install, Compose).
+
+Solo esas tasks. Escribe y corre la batería que la spec nombró (unit / integración / e2e). Curl no cierra G4. Antes de marcar `implement` done: `docker compose ls` + `docker ps` (un runtime del corte) y una URL que abre, escrita en `STATUS.md`. Actualiza `step` y `progress`. Reescribe `STATUS.md`.
 
 ### Gate
 
-Checklist `docs/02-gates/quality-gates.md`. Fallo = archivo + hueco. G2+ ambiguo: pregunta. G5 = drift HU / spec / código del corte. Cerrar runbook incluye `STATUS.md`.
+Checklist `docs/02-gates/quality-gates.md`. Fallo = archivo + hueco. G2+ ambiguo: pregunta. G5 = drift HU / spec / código del corte. Cerrar runbook incluye `STATUS.md` y card `lecciones`.

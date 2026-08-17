@@ -26,9 +26,12 @@ Fork de *tu* producto en la raíz: usas `apps/` y `docs/` de la raíz, no copies
 4. Si el arreglo es solo de la instancia: `open` o `wont` con una línea de por qué.
 5. No parches solo `example/` dejando el molde mudo.
 
+Dolores de runtime (puerto, URL, Compose): card `lecciones` del molde + `example/LECCIONES.md`. GAPS es “faltaba un concepto”, no “volví a chocar el 3001”.
+
 ## Si aplica, cargar
 
 - `example/README.md`
 - `example/GAPS.md`
+- `example/LECCIONES.md` si el dolor fue de ejecución
 - `example/AGENTS.md`
 - `docs/00-howto/example.md`

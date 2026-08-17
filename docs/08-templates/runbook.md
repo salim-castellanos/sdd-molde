@@ -32,4 +32,4 @@ sequenceDiagram
 - Siguiente:
 - Bloqueos:
 
-Al crear este archivo y al cerrar cada paso: reescribir `STATUS.md` (card `status`).
+Al crear este archivo y al cerrar cada paso: reescribir `STATUS.md` (card `status`). Al cerrar el runbook: card `lecciones`.

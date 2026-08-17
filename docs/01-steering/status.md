@@ -16,11 +16,11 @@ Para componer o implementar: el runbook activo. `STATUS.md` no sustituye el paso
 
 ## Cómo se actualiza
 
-1. Lee `docs/05-stories/catalog.md` (mapa HU → feature → épica → módulo). No hace falta abrir cada HU.
+1. Lee `docs/05-backlog/catalog.md` (mapa HU → feature → épica → módulo). No hace falta abrir cada HU.
 2. Mira `docs/06-specs/` y el frontmatter `status` de cada spec que exista.
 3. Lee frontmatter / tabla de `docs/07-runbooks/README.md` y el runbook que haya cambiado.
 4. Aplica la fórmula de `STATUS.md` (0 / 50 / 100 por HU).
-5. Reescribe `STATUS.md` (fecha, tablas, siguiente paso). Una línea en el README solo si el enlace o el resumen de una frase cambió — **no dupliques los %** en el README.
+5. Reescribe `STATUS.md` (fecha, tablas, siguiente paso). Si el corte tiene UI o api alcanzable, una línea **Probar:** con la URL que abre. Una línea en el README solo si el enlace o el resumen de una frase cambió — **no dupliques los %** en el README.
 
 Mismo turno que el runbook. No “ya lo actualizo después”.
 

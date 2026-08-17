@@ -23,13 +23,13 @@ Editar un steering o un ADR sin entregar producto.
 
 ## Cómo se crea
 
-1. Lista las HUs del corte (`docs/05-stories/`).
+1. Lista las HUs del corte (`docs/05-backlog/`).
 2. Diagrama de secuencia: qué capacidad debe **existir** antes de cuál.
 3. Por cada HU, dos pasos de runbook: `compose` y `implement` (más un `analyze` inicial).
 4. Archivo: `docs/07-runbooks/NNN-slug/runbook.md` (template `docs/08-templates/runbook.md`).
 5. Status inicial `in-progress`, `step: 1`, `progress: 0`.
 6. Cada vez que un paso termina, se actualiza status, % y descripción. El % es pasos `done` / total.
-7. En el **mismo turno**, card `status`: reescribe `STATUS.md`.
+7. En el **mismo turno**, card `status`: reescribe `STATUS.md`. Al cerrar el runbook: card `lecciones`.
 
 ## Si aplica, cargar
 
@@ -37,3 +37,4 @@ Editar un steering o un ADR sin entregar producto.
 - `docs/07-runbooks/README.md` si vas a crear uno
 - `docs/08-templates/runbook.md`
 - Tras un cambio: `STATUS.md` (card `status`)
+- Al cerrar: card `lecciones`

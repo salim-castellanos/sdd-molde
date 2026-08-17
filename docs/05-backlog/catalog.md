@@ -1,6 +1,6 @@
-# Catálogo — historias
+# Catálogo — backlog
 
-Padre de `docs/05-stories/`. Jerarquía **módulo → épica → feature → HU**.
+Padre de `docs/05-backlog/`. Jerarquía **módulo → épica → feature → HU**.
 
 No cargues todas las HUs. Abre el catálogo, luego **una** HU (y su feature/épica solo si estás partiendo o trazando).
 
@@ -52,4 +52,4 @@ El **runbook** ordena la ejecución. Este catálogo ordena el **significado**. L
 2. Épica: `E-NNN-slug/epic.md` (template `docs/08-templates/epic.md`).
 3. Feature: `F-NNN-slug/feature.md`.
 4. HU: un archivo, EARS, `needs`, `screen`. Template `story.md`.
-5. No cuelgues una HU suelta en la raíz de `05-stories/`.
+5. No cuelgues una HU suelta en la raíz de `05-backlog/`.

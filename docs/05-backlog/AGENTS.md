@@ -1,4 +1,4 @@
-# AGENTS.md — stories
+# AGENTS.md — backlog
 
 Insumos. No implementes. No cuelgues HUs en la raíz.
 

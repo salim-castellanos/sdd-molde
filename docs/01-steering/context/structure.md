@@ -66,7 +66,7 @@ Una instancia (`example/`) puede definir otra partición y sufijos en `example/d
 
 | Cosa | Convención |
 | --- | --- |
-| Módulo / épica / feature / HU | `docs/05-stories/NN-mod/E-NNN/F-NNN/HU-NNN-slug.md` |
+| Módulo / épica / feature / HU | `docs/05-backlog/NN-mod/E-NNN/F-NNN/HU-NNN-slug.md` |
 | Catálogo arch / diseño / HUs | `docs/0N-*/catalog.md` |
 | Spec (compuesta) | `docs/06-specs/NNN-slug/` |
 | Runbook | `docs/07-runbooks/NNN-slug/runbook.md` |

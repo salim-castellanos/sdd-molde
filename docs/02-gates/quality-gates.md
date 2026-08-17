@@ -6,7 +6,7 @@ Se marcan en el runbook (paso) y en la spec (`status`). No se inventan gates ext
 
 Antes de componer la primera spec del corte.
 
-- [ ] Hay HUs en `docs/05-stories/` con aceptación.
+- [ ] Hay HUs en `docs/05-backlog/` con aceptación.
 - [ ] Hay diagrama de secuencia o equivalente (dependencias).
 - [ ] Cada HU del corte tiene pasos `compose` + `implement` en el runbook.
 - [ ] El paso 1 `analyze` está `done`.
@@ -17,7 +17,7 @@ Antes de escribir `plan.md`.
 
 - [ ] Sección **Insumos** lista HU + diseño + arch + steerings + gates (rutas concretas).
 - [ ] Cubre el flujo completo: datos/BD, api, pantalla, validación, mensajes, authn/authz y **pruebas por capa** (unitaria, integración, e2e HTTP, e2e Playwright si hay UI) o “no aplica” en cada una.
-- [ ] La spec no inventa comportamiento que no esté en la HU o en un insumo.
+- [ ] La spec no inventa comportamiento que no esté en la HU o en un insumo. Si la HU nombra una política/tope **sin cifra**, la cifra queda en la HU o en un insumo **en este compose**.
 - [ ] In/out of scope está escrito.
 - [ ] No hay decisiones de librerías (eso es plan).
 - [ ] Un humano diría “sí, eso es lo que quiero”.
@@ -47,6 +47,8 @@ Antes de escribir `plan.md`.
 
 - [ ] Tasks del corte `[x]`.
 - [ ] Pasan las pruebas que la spec nombró (unitaria, integración/humo, e2e). Curl o el chat no cuentan.
+- [ ] Runtime del corte: **un** Compose (`docker compose ls` / `docker ps`); los puertos del corte no los tiene otro proyecto.
+- [ ] `STATUS.md` (o README) tiene la **URL del corte** y esa URL abre. Tests verdes no bastan.
 - [ ] Sin secretos nuevos.
 - [ ] Sin rutas fuera de `docs/04-design/`.
 
@@ -60,6 +62,7 @@ Antes de escribir `plan.md`.
 - [ ] Si la forma del sistema cambió, hay ADR.
 - [ ] `context/` sigue siendo verdad.
 - [ ] `STATUS.md` coincide con runbooks + specs.
+- [ ] Card `lecciones`: fila nueva si el corte dolió en ejecución, o explícito “ninguna nueva”. Si la regla debe repetirse, se **promueve** a gate/loop/card en el mismo turno.
 
 **Status runbook:** `closed`
 

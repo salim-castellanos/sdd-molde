@@ -22,3 +22,10 @@ Una spec solo de api declara “no aplica” en Playwright.
 - Card: `docs/01-steering/pruebas.md`.
 
 Instancia Express: `example/docs/03-architecture/09-pruebas.md`.
+
+## Trampas (no re-diagnosticar)
+
+- Tests de BD: el helper de env es el **primer** import (ESM carga `config` si importas el service antes). `config` no congela `DATABASE_URL` en el load: usa getter.
+- `node --test` en paralelo + `sync({ force })` → `--test-concurrency=1`.
+- Playwright: `toHaveText` / `toContainText`, no `toHaveTextContent` (eso es Testing Library / jest-dom).
+- G4 no cierra si solo pasó `npm test`: hace falta la URL del corte.

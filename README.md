@@ -76,7 +76,7 @@ Qué entra en una spec: [docs/01-steering/especificacion.md](docs/01-steering/es
 | Catálogo de steering | [docs/01-steering/catalog.md](docs/01-steering/catalog.md) |
 | Arquitectura | [docs/03-architecture/catalog.md](docs/03-architecture/catalog.md) |
 | Diseño | [docs/04-design/catalog.md](docs/04-design/catalog.md) |
-| Historias (módulo → épica → feature → HU) | [docs/05-stories/catalog.md](docs/05-stories/catalog.md) |
+| Backlog (módulo → épica → feature → HU) | [docs/05-backlog/catalog.md](docs/05-backlog/catalog.md) |
 | Instancia (mismo árbol) | [example/README.md](example/README.md) |
 | Monorepo y submodules | [docs/00-howto/monorepo-vs-submodules.md](docs/00-howto/monorepo-vs-submodules.md) |
 

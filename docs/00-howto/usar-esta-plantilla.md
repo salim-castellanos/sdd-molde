@@ -6,7 +6,7 @@
 2. Reescribe `docs/01-steering/context/product.md` (la card `product` apunta ahí).
 3. Confirma `context/tech.md` y `context/structure.md`.
 4. Edita `docs/02-gates/constitution.md`.
-5. Sustituye las HUs de `docs/05-stories/` por las tuyas (o archiva las de Clave).
+5. Sustituye las HUs de `docs/05-backlog/` por las tuyas (o archiva las de Clave).
 6. Crea un runbook en `docs/07-runbooks/` que ordene esas HUs (dependencias primero).
 7. Pide al agente: *sigue el runbook N*. No le pidas una spec suelta ni código.
 

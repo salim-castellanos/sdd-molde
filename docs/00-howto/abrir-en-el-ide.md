@@ -24,7 +24,7 @@ Un agente que **solo** conozca `AGENTS.md` (sin `.cursor/`, sin `.kiro/`):
 
 - [ ] No codea desde una HU.
 - [ ] Encuentra el catálogo y el runbook activo.
-- [ ] En `docs/05-stories/` lee el `AGENTS.md` local y no implementa.
+- [ ] En `docs/05-backlog/` lee el `AGENTS.md` local y no implementa.
 - [ ] Entiende que `docs/06-specs/` vacío es correcto.
 
 Si eso falla, el contrato no está en `AGENTS.md` — está escondido en un vendor. Muévelo.

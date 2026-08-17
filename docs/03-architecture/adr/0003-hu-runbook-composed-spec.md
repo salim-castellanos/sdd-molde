@@ -9,7 +9,7 @@ Tratar la spec como el lugar de la historia (y ejecutarla directo) mezcla insumo
 
 ## Decisión
 
-- Las HUs viven en `docs/05-stories/`.
+- Las HUs viven en `docs/05-backlog/`.
 - El runbook en `docs/07-runbooks/` ordena compose → implement y guarda estado.
 - La spec en `docs/06-specs/` se **compone**; no se escribe para codear.
 - `docs/01-steering/catalog.md` es el padre: cards delgadas apuntan a docs.

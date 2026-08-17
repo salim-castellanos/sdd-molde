@@ -13,7 +13,7 @@ AND `STATUS.md` SHALL reescribirse en el mismo trabajo (rollup, no una verdad pa
 ## II. La HU es insumo, no ejecutable
 
 WHERE hay una necesidad de usuario,
-THE SHALL documentarse como HU bajo `docs/05-stories/<módulo>/E-…/F-…/HU-NNN-slug.md`.
+THE SHALL documentarse como HU bajo `docs/05-backlog/<módulo>/E-…/F-…/HU-NNN-slug.md`.
 THE spec SHALL componerse a partir de esa HU más diseño, arquitectura, gates y steerings aplicables.
 THE plantilla SHALL NOT tratar la spec como el lugar donde “vive” la historia.
 

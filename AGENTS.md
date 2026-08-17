@@ -16,7 +16,7 @@ Plantilla SDD. Conocimiento en `docs/`. Software en `apps/`. La instancia Mutuo 
 
 1. Este archivo y `docs/01-steering/catalog.md`.
 2. Solo las cards cuyo trigger coincide. Cada card dice qué doc cargar.
-3. Si entregas producto: runbook **activo** en `docs/07-runbooks/`. Paso corriente. Al crear o avanzar el runbook, reescribe `STATUS.md` (card `status`).
+3. Si entregas producto: runbook **activo** en `docs/07-runbooks/`. Paso corriente. Al crear o avanzar el runbook, reescribe `STATUS.md` (card `status`). Al **cerrar** (G5): card `lecciones`.
 4. “¿En qué vamos?” → `STATUS.md`, no el runbook entero.
 5. No cargues todas las HUs, specs ni `context/`.
 6. Procedimiento: `docs/00-howto/sdd-loop.md`. Carga fina: card `carga`.
@@ -29,7 +29,7 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 | --- | --- |
 | ¿Qué steering abro? | `docs/01-steering/catalog.md` |
 | ¿Qué es una HU / spec / runbook? | cards `historia`, `especificacion`, `runbook` |
-| ¿Historias? | `docs/05-stories/catalog.md` |
+| ¿Backlog (módulo → épica → feature → HU)? | `docs/05-backlog/catalog.md` |
 | ¿Specs compuestas? | `docs/06-specs/` |
 | ¿En qué vamos / avance ejecutivo? | `STATUS.md` |
 | ¿En qué paso de entrega? | `docs/07-runbooks/` |
@@ -37,6 +37,7 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 | ¿Gates? | `docs/02-gates/` |
 | ¿Código? | `apps/*` (tu fork) · `example/apps/` (instancia, cuando exista spec) |
 | ¿Hueco del molde al usar el ejemplo? | `example/GAPS.md` + card `example` |
+| ¿Qué dolió al ejecutar (puertos, URL, G4 ambiente)? | card `lecciones` |
 
 ## Loop
 
@@ -52,6 +53,8 @@ catalog (padre)
  siguiente paso del runbook → G5 al cerrar
     ↓
  STATUS.md (mismo turno)
+    ↓
+ lecciones (G5: fila si dolió; promover a gate/loop)
 ```
 
 Una spec no se crea para ejecutar. Se compone en el runbook y se ejecuta en el paso siguiente.
@@ -68,6 +71,7 @@ Una spec no se crea para ejecutar. Se compone en el runbook y se ejecuta en el p
 - No conviertas este archivo en un manual. Si crece, va a `docs/`.
 - No agregues una carpeta muda. Card `ide`.
 - No dejes un arreglo solo en `example/` si el hueco es del molde. `GAPS.md` + parche a `docs/`.
+- No cierres G4 con tests verdes si el humano no tiene una URL del corte que abre.
 
 ## Convenciones
 

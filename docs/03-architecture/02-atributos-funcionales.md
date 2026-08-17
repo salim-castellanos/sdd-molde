@@ -1,6 +1,6 @@
 # Atributos funcionales (sistema)
 
-Capacidades del **sistema**, no HUs. Las HUs viven en `docs/05-stories/`. Aquí se lista qué debe poder existir para que esas HUs tengan sentido.
+Capacidades del **sistema**, no HUs. Las HUs viven en `docs/05-backlog/`. Aquí se lista qué debe poder existir para que esas HUs tengan sentido.
 
 **Estado:** Clave relleno.
 

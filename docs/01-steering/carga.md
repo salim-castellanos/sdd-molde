@@ -16,6 +16,7 @@ Al empezar un turno, al cambiar de paso del runbook, o cuando no sepas qué arch
 4. Cards del catálogo cuyo trigger coincide con ese paso. No el resto.
 5. Si la card manda a un catálogo (03/04/05), abre **ese** `catalog.md` y luego **un** destino. No el folder.
 6. Specs: **solo** la del paso. Una spec `closed` se abre si la HU actual `needs` esa capacidad (ejemplo: crear carro necesita la spec ya hecha de paleta).
+7. Al **cerrar** el runbook (G5): card `lecciones` — el log, no todo `docs/`.
 
 ## No cargar
 

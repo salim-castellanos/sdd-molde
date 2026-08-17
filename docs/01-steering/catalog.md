@@ -16,7 +16,7 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | arquitectura | NFR, estilo, IAM, config, C4, ADR | [arquitectura.md](arquitectura.md) | `docs/03-architecture/catalog.md` + **un** archivo |
 | formularios | validar inputs, errores de campo, Zod | [formularios.md](formularios.md) | `docs/04-design/ui-notes.md` + context/tech |
 | diseño | pantallas, tokens, patrones, a11y | [diseno.md](diseno.md) | `docs/04-design/catalog.md` + **un** archivo |
-| historia | módulo, épica, feature, HU | [historia.md](historia.md) | `docs/05-stories/catalog.md` + **una** HU |
+| historia | módulo, épica, feature, HU | [historia.md](historia.md) | `docs/05-backlog/catalog.md` + **una** HU |
 | especificacion | cómo se **compone** una spec y a partir de qué | [especificacion.md](especificacion.md) | HU + diseño + arch + gates |
 | carga | qué spec/HU/doc abrir ahora (no todas) | [carga.md](carga.md) | runbook activo + esta tabla |
 | runbook | secuencia, dependencias, ejecutar un corte | [runbook.md](runbook.md) | `docs/07-runbooks/` |
@@ -24,5 +24,6 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | ide | abrir el repo, Kiro/Cursor/otro, agregar carpeta, tentación de clonar config por agente | [ide.md](ide.md) | `AGENTS.md` + `docs/00-howto/abrir-en-el-ide.md` |
 | pruebas | unitarias, humo, e2e, G4, “probé con curl” | [pruebas.md](pruebas.md) | `docs/00-howto/pruebas.md` + sección Pruebas de la spec |
 | example | trabajar en example/, hueco del molde, GAPS | [example.md](example.md) | `example/README.md` + `example/GAPS.md` |
+| lecciones | cerrar runbook, G4 por ambiente, puerto ocupado, “no abre localhost”, postmortem, “qué aprendimos” | [lecciones.md](lecciones.md) | [../00-howto/lecciones.md](../00-howto/lecciones.md) · en example: `example/LECCIONES.md` |
 
 Constitución y gates no son steering: `docs/02-gates/`. Se leen al cruzar de fase, no al abrir el chat.
