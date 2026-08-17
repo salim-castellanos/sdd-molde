@@ -32,3 +32,4 @@ Kiro lee `AGENTS.md` de fábrica. No hace falta `.kiro/steering/` si el catálog
 
 - [context/structure.md](context/structure.md) sección IDE
 - `docs/00-howto/abrir-en-el-ide.md`
+- Landing EN/ES: `docs/00-howto/i18n.md` (no un segundo cerebro)

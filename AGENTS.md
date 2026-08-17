@@ -75,7 +75,7 @@ Una spec no se crea para ejecutar. Se compone en el runbook y se ejecuta en el p
 
 ## Convenciones
 
-- Documentación en español. Código, APIs e identificadores en inglés.
+- Método (HU, spec, runbook, cards): español. Landing pública: inglés + español (`README.md` / `README.es.md`, sufijo `.en.md`). Card/howto: `docs/00-howto/i18n.md`. Código, APIs e identificadores: inglés.
 - Commits: `feat(auth):`, `docs(spec):`, `docs(runbook):`.
 - HU, spec y código no divergen en silencio.
 - El `AGENTS.md` más cercano al archivo en el que trabajas gana en conflictos de stack.

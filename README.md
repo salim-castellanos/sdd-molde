@@ -1,48 +1,50 @@
 # Molde
 
-Plantilla de **Spec-Driven Development** para un solo agente. Un `AGENTS.md`, un catálogo, un runbook. Sin orquesta de roles.
+**English** | [Español](./README.es.md)
+
+A **Spec-Driven Development** workspace template for a single agent. One `AGENTS.md`, one catalog, one runbook. No role orchestra.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**Repo:** [`sdd-molde`](https://github.com/salim-castellanos/sdd-molde) · **Qué es (y qué no):** [docs/00-howto/que-es.md](docs/00-howto/que-es.md)
+**Repo:** [`sdd-molde`](https://github.com/salim-castellanos/sdd-molde) · **What it is (and is not):** [docs/00-howto/que-es.en.md](docs/00-howto/que-es.en.md) · Languages: [docs/00-howto/i18n.md](docs/00-howto/i18n.md)
 
-El contrato del agente es [AGENTS.md](AGENTS.md). El avance del producto de ejemplo (Clave) está en [STATUS.md](STATUS.md).
+The agent contract is [AGENTS.md](AGENTS.md). Progress for the sample product (Clave) lives in [STATUS.md](STATUS.md).
 
-## Para quién
+## Who it is for
 
-Quien construye con un agente (Cursor, Kiro, Copilot, Claude Code, Codex) y necesita un repo que ya sepa dónde vive cada cosa: historias, arquitectura, diseño, specs y código.
+Anyone building with an agent (Cursor, Kiro, Copilot, Claude Code, Codex) who needs a repo that already knows where things live: stories, architecture, design, specs, and code.
 
-Si buscabas **BMAD**: ese método reparte el trabajo entre muchos agentes-rol. Molde es SDD **simplificado**: un agente, docs visibles, spec compuesta, gates. Comparación: [qué es](docs/00-howto/que-es.md).
+If you were looking for **BMAD**: that method splits work across many role-agents. Molde is **simpler** SDD: one agent, visible docs, a composed spec, gates. Comparison: [what it is](docs/00-howto/que-es.en.md).
 
-## Qué resuelve
+## What it solves
 
-- Un workspace listo: documentación, catálogos y huecos de `apps/`, no una carpeta vacía.
-- Un método único, portable: `AGENTS.md` + `docs/`. No un cerebro por herramienta.
-- El loop SDD de 2025–2026 (constitución → spec → plan → tasks → calidad) **visible** en `docs/`, no escondido en `.specify/` ni en packs de vendor.
-- Monorepo al empezar; cada app se puede extraer a submodule después.
+- A ready workspace: documentation, catalogs, and empty `apps/` slots — not a blank folder.
+- One portable method: `AGENTS.md` + `docs/`. Not one brain per tool.
+- The 2025–2026 SDD loop (constitution → spec → plan → tasks → quality) **visible** in `docs/`, not hidden in `.specify/` or a vendor pack.
+- Monorepo first; each app can become a submodule later.
 
-## Inicio rápido
+## Quick start
 
-1. En GitHub: **Use this template** (o clona el repo).
-2. Ábrelo en tu IDE. Acepta las extensiones recomendadas si estás en la familia VS Code.
-3. Reescribe [docs/01-steering/context/product.md](docs/01-steering/context/product.md) y pide al agente: *sigue el runbook 001-identidad*.
+1. On GitHub: **Use this template** (or clone the repo).
+2. Open it in your IDE. Accept the recommended extensions if you are in the VS Code family.
+3. Rewrite [docs/01-steering/context/product.md](docs/01-steering/context/product.md) and ask the agent: *follow runbook 001-identidad*.
 
-Guía de fork: [docs/00-howto/usar-esta-plantilla.md](docs/00-howto/usar-esta-plantilla.md).  
-Cómo lo lee el IDE: [docs/00-howto/abrir-en-el-ide.md](docs/00-howto/abrir-en-el-ide.md).
+Fork guide: [docs/00-howto/usar-esta-plantilla.md](docs/00-howto/usar-esta-plantilla.md) (Spanish).  
+How the IDE reads it: [docs/00-howto/abrir-en-el-ide.md](docs/00-howto/abrir-en-el-ide.md).
 
-No empieces por el código. Primero se **compone** la spec; el [runbook](docs/07-runbooks/001-identidad/runbook.md) dice en qué orden.
+Do not start with code. Compose the spec first; the [runbook](docs/07-runbooks/001-identidad/runbook.md) sets the order.
 
-## Cómo se trabaja
+## How work happens
 
-La spec no sale de una HU sola. Se **compone**: es el end-to-end de una funcionalidad (pantalla, validación, mensajes, autenticación, autorización y cómo se prueba). Los insumos no se ejecutan; la spec sí.
+A spec does not come from a user story alone. It is **composed**: the end-to-end of one capability (screen, validation, messages, authn, authz, and how it is tested). Inputs are not executed; the spec is.
 
 ```mermaid
 flowchart TB
-  subgraph insumos [Insumos]
-    HU[Historias de usuario]
-    DS[Sistema de diseño]
-    AR[Arquitectura]
-    ST[Steerings]
+  subgraph insumos [Inputs]
+    HU[User stories]
+    DS[Design system]
+    AR[Architecture]
+    ST[Steering]
     GT[Gates]
   end
   HU --> SPEC
@@ -50,39 +52,40 @@ flowchart TB
   AR --> SPEC
   ST --> SPEC
   GT --> SPEC
-  SPEC[Spec E2E]
-  SPEC --> CODE[Implementación + pruebas]
-  RB[Runbook: orden y estado] -.-> SPEC
+  SPEC[E2E spec]
+  SPEC --> CODE[Implementation + tests]
+  RB[Runbook: order and status] -.-> SPEC
   RB -.-> CODE
 ```
 
-El runbook no reemplaza la spec: ordena dependencias (autorización antes que registro) y actualiza [STATUS.md](STATUS.md).
+The runbook does not replace the spec: it orders dependencies (authorization before sign-up) and updates [STATUS.md](STATUS.md).
 
-Qué entra en una spec: [docs/01-steering/especificacion.md](docs/01-steering/especificacion.md). Loop: [docs/00-howto/sdd-loop.md](docs/00-howto/sdd-loop.md). Por qué esta forma: [docs/00-howto/estado-del-arte.md](docs/00-howto/estado-del-arte.md).
+What belongs in a spec: [docs/01-steering/especificacion.md](docs/01-steering/especificacion.md). Loop: [docs/00-howto/sdd-loop.md](docs/00-howto/sdd-loop.md). Why this shape: [docs/00-howto/estado-del-arte.md](docs/00-howto/estado-del-arte.md).
 
 ## Layout
 
-| Ruta | Rol |
+| Path | Role |
 | --- | --- |
-| `AGENTS.md` | Contrato de cualquier agente |
-| `STATUS.md` | Informe ejecutivo del **producto del fork** (rollup) |
-| `docs/` | Conocimiento: steering, gates, arch, diseño, HUs, specs, runbooks |
-| `apps/` | Artefactos de **tu** fork (vacíos en el molde) |
+| `AGENTS.md` | Contract for any agent |
+| `STATUS.md` | Executive report for the **fork’s product** (rollup) |
+| `docs/` | Knowledge: steering, gates, arch, design, stories, specs, runbooks |
+| `apps/` | Artifacts of **your** fork (empty in the template) |
 
-Índice: [docs/README.md](docs/README.md).
+Index: [docs/README.md](docs/README.md).
 
-## Documentación
+## Documentation
 
-| Tema | Dónde |
+| Topic | Where |
 | --- | --- |
-| Qué es Molde (vs BMAD, Spec Kit, Kiro) | [docs/00-howto/que-es.md](docs/00-howto/que-es.md) |
-| Estado del ejemplo (Clave) | [STATUS.md](STATUS.md) |
-| Catálogo de steering | [docs/01-steering/catalog.md](docs/01-steering/catalog.md) |
-| Arquitectura | [docs/03-architecture/catalog.md](docs/03-architecture/catalog.md) |
-| Diseño | [docs/04-design/catalog.md](docs/04-design/catalog.md) |
-| Backlog (módulo → épica → feature → HU) | [docs/05-backlog/catalog.md](docs/05-backlog/catalog.md) |
-| Monorepo y submodules | [docs/00-howto/monorepo-vs-submodules.md](docs/00-howto/monorepo-vs-submodules.md) |
+| What Molde is (vs BMAD, Spec Kit, Kiro) | [docs/00-howto/que-es.en.md](docs/00-howto/que-es.en.md) |
+| English / Spanish convention | [docs/00-howto/i18n.md](docs/00-howto/i18n.md) |
+| Sample product status (Clave) | [STATUS.md](STATUS.md) |
+| Steering catalog | [docs/01-steering/catalog.md](docs/01-steering/catalog.md) |
+| Architecture | [docs/03-architecture/catalog.md](docs/03-architecture/catalog.md) |
+| Design | [docs/04-design/catalog.md](docs/04-design/catalog.md) |
+| Backlog (module → epic → feature → story) | [docs/05-backlog/catalog.md](docs/05-backlog/catalog.md) |
+| Monorepo and submodules | [docs/00-howto/monorepo-vs-submodules.md](docs/00-howto/monorepo-vs-submodules.md) |
 
-## Licencia
+## License
 
 [MIT](LICENSE).

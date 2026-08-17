@@ -1,6 +1,6 @@
 # Usar esta plantilla
 
-Esto es **Molde** (`sdd-molde`). Qué es: [que-es.md](que-es.md).
+Esto es **Molde** (`sdd-molde`). Qué es: [que-es.md](que-es.md). Landing bilingüe: [i18n.md](i18n.md).
 
 ## Si vas a construir TU producto
 

@@ -1,5 +1,7 @@
 # Qué es Molde
 
+[English](./que-es.en.md) | **Español**
+
 **Molde** es una plantilla de workspace para **Spec-Driven Development** (SDD). Un agente (Cursor, Kiro, Copilot, Claude Code, Codex) y un humano trabajan el mismo árbol: `AGENTS.md` + `docs/` + `apps/`.
 
 No es un producto de negocio. El producto lo escribes tú al hacer fork (`docs/01-steering/context/product.md`). En el molde, **Clave** es solo el ejemplo mínimo (identidad). Una instancia aparte (`example/`, otro git) puede ser otro producto; no viaja en el clone.

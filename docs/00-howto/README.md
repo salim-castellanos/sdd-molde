@@ -2,7 +2,8 @@
 
 Guías para usar este workspace, no para el producto de ejemplo.
 
-- [Qué es Molde](que-es.md) — vs BMAD, Spec Kit, Kiro.
+- [Qué es Molde](que-es.md) · [What Molde is](que-es.en.md) — vs BMAD, Spec Kit, Kiro.
+- [Idiomas](i18n.md) · [Languages](i18n.en.md) — English | Español en el landing.
 - [Usar esta plantilla](usar-esta-plantilla.md) — fork, qué tocar primero, qué borrar.
 - [Abrir en el IDE](abrir-en-el-ide.md) — cualquier agente que lea `AGENTS.md`.
 - [Loop SDD](sdd-loop.md) — runbook → compose → implement.
