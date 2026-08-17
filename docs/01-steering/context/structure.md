@@ -52,6 +52,8 @@ apps/web/
 
 Una pantalla de diseño → una page. No crear rutas huérfanas.
 
+`refs/` (si existe): clone de una plantilla de terceros. No es `apps/`. No se importa.
+
 ### `apps/mobile`
 
 Hueco. No se escribe código hasta que un runbook y una spec lo pidan.

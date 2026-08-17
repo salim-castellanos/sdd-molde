@@ -14,6 +14,8 @@ Inventario. Si no está aquí, no se inventa un kit.
 | Modal | no | — | no usar en auth |
 | Toast | no | — | [RELLENAR] |
 | IconButton | no | — | |
+| Icono UI | [RELLENAR] | nav | Lucide o equivalente. **No** logos de marca. |
+| Icono de marca | [RELLENAR] | OAuth si la HU lo pide | Tabler brands / Simple Icons. No Lucide. |
 
 [RELLENAR: añade Button secundario, Select, etc. cuando una HU lo pida.]
 

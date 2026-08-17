@@ -8,6 +8,7 @@ No hay design system. Hay restricciones para que el agente no improvise una marc
 - Errores de campo bajo el input. Error de servidor arriba del formulario.
 - Contraste: tinta sobre superficie, o texto claro sobre marca. No mezclar.
 - Password: input type password; no mostrar fortaleza fancy, solo la regla de la spec.
-- No ilustraciones decorativas, no OAuth buttons, no “continuar con Google”. Foto del producto (si el kit la usa) no es ilustración.
+- No ilustraciones decorativas. Foto del producto (si el kit la usa) no es ilustración.
+- No OAuth inventado. Si una HU lo pide: label + **icono de marca** (Tabler / Simple Icons), no Lucide.
 
 Si más adelante hay marca, se escribe aquí y se referencia desde el plan, no al revés.

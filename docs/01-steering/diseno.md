@@ -4,11 +4,12 @@ Dos capas. No son el mismo trabajo.
 
 | Capa | Qué es | Cuándo se llena |
 | --- | --- | --- |
+| **Referencia (opcional)** | Clone MIT de una plantilla (p. ej. shadcn-admin) **fuera** de `apps/`. Se mira; no se importa | Si el producto adopta un dashboard de terceros (ADR) |
 | **Kit (contrato)** | Principios, tokens, inventario, marca | Al existir producto |
 | **Kit HTML** | `docs/04-design/kit/` — shell + componentes en HTML. Se **itera** aquí | Antes de implementar en `apps/web` |
 | **Pantalla** | Una ruta de una HU | Al **componer**. `screens.md` + el kit ya listo |
 
-El HTML del kit no es la app. El `implement` copia tokens y markup al stack de la spec. El kit no inventa fichas de negocio.
+El HTML del kit no es la app. Una plantilla de GitHub no es el kit. El `implement` copia tokens y markup al stack de la spec. El kit no inventa fichas de negocio. No se sustituye `apps/web` por el clone.
 
 ## Cuándo cargarlo
 

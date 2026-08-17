@@ -15,6 +15,7 @@ Padre de `docs/04-design/`. Abre **un** archivo. Clave es un sistema mínimo (no
 | notes | [ui-notes.md](ui-notes.md) | Restricciones cortas (legado) | markup rápido |
 | mark | [05-icono.md](05-icono.md) | Wordmark, favicon, app icon | logo, icono, marca |
 | html | [kit/](kit/) | Preview HTML (shell, componentes) | iterar UI, “ver el kit” |
+| refs | (en el fork) `refs/README.md` | Plantilla MIT vs kit vs `apps/web` | dashboard de terceros |
 
 Al componer una spec con UI: `scr` (una fila) + `flow` (un flujo) + `pat` si hay form. No cargues `comp` entero si no creas un componente nuevo.
 

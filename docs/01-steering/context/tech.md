@@ -24,6 +24,7 @@ Al hacer fork, cambia este archivo y `structure.md` juntos. No dejes un stack �
 - Secretos en el repo.
 - Autenticación “solo en el frontend”.
 - Añadir Redis, Kafka, Nest, Next, Prisma o un design system “por si crece”. Si una spec lo exige, se discute en un ADR primero.
+- Clonar una plantilla admin (shadcn-admin, TailAdmin, MUI) **como** `apps/web`. Si se usa, va a `refs/` (gitignore), se teñe en el kit y se copia al producto. Licencia MIT: uso comercial con aviso de copyright. Clerk u otro IdP de la demo no se copian.
 
 ## Versiones
 
