@@ -6,7 +6,7 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 ## Qué es este repo
 
-Plantilla SDD. Conocimiento en `docs/`. Software en `apps/`. La instancia Mistratos es **otro git** (`example/`). Monorepo; cada app puede ser submodule después.
+**Molde** (`sdd-molde`): plantilla SDD para un solo agente. Qué es y qué no (BMAD, Spec Kit): `docs/00-howto/que-es.md`. Conocimiento en `docs/`. Software en `apps/`. Una instancia de producto puede vivir en `example/` como **otro git**. Monorepo; cada app puede ser submodule después.
 
 `AGENTS.md` anidados (este directorio y los hijos) dicen el propósito del árbol. Card `ide` al agregar una pieza. `.vscode/` es chrome del editor (común a forks de VS Code), no cerebro del agente.
 

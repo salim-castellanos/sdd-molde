@@ -1,5 +1,7 @@
 # Usar esta plantilla
 
+Esto es **Molde** (`sdd-molde`). Qué es: [que-es.md](que-es.md).
+
 ## Si vas a construir TU producto
 
 1. Clona o usa “Use this template”.

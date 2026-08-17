@@ -1,6 +1,6 @@
 # Documentación
 
-El código generado está en `/apps`. El informe ejecutivo del producto está en [`STATUS.md`](../STATUS.md).
+**Molde** — plantilla SDD. [Qué es](00-howto/que-es.md). El código del fork está en `/apps`. El informe ejecutivo del **producto** (Clave en este molde) está en [`STATUS.md`](../STATUS.md).
 
 ## Índice
 
