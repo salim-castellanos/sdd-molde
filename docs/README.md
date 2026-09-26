@@ -11,13 +11,22 @@
 | [02-gates](02-gates/) | Constitución y G0–G5 | Al cruzar de fase |
 | [03-architecture](03-architecture/) | [Catálogo](03-architecture/catalog.md): AF, NFR, estilos, IAM, config | Un archivo del catálogo |
 | [04-design](04-design/) | [Catálogo](04-design/catalog.md): principios, tokens, patrones | Un archivo + una pantalla |
-| [05-backlog](05-backlog/) | [Catálogo](05-backlog/catalog.md): backlog (módulo → épica → feature → HU) | Una HU |
-| [06-specs](06-specs/) | Specs **compuestas** | La spec del paso |
-| [07-runbooks](07-runbooks/) | Secuencia + estado + % | El runbook activo |
+| [05-backlog](05-backlog/) | **HUs** (fuente del qué): [catálogo](05-backlog/catalog.md) módulo → épica → feature → HU | Una HU |
+| [06-specs](06-specs/) | Specs **compuestas** (rehacibles si la HU vive) | La spec del paso |
+| [07-runbooks](07-runbooks/) | Orden + estado + % | El runbook activo |
 | [08-templates](08-templates/) | Formatos | Al crear un artefacto |
 
 ## Cadena
 
-HU ─(+ diseño + arch + gates + cards)→ spec ─(runbook)→ código.
+```text
+HU (05-backlog)     ← fuente del qué; no se tira
+  + diseño + arch + gates + cards
+        ↓
+ spec (06-specs)    ← se puede volver a componer
+        ↓
+ runbook (07)       ← solo el orden
+        ↓
+ código (apps/)
+```
 
-El runbook ordena las HUs que dependen entre sí.
+Si abres `06` o `07` y no ves HUs: están un nivel antes, en `05-backlog/catalog.md`.

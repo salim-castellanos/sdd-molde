@@ -1,6 +1,6 @@
 # 06 — Specs
 
-Artefactos **compuestos**, no el punto de partida.
+Artefactos **compuestos**, no el punto de partida. El punto de partida es la HU en [`../05-backlog/`](../05-backlog/). Sin esa HU, esta carpeta no tiene sentido.
 
 Una spec nace en un paso `compose` del runbook: HU + diseño + arquitectura + gates + steerings aplicables. Recién el paso `implement` la ejecuta.
 

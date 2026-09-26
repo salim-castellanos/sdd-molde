@@ -1,5 +1,9 @@
-# 05 — Backlog
+# 05 — Historias (backlog)
 
-Empieza por el [catálogo](catalog.md). Jerarquía: módulo → épica → feature → HU.
+**Aquí viven las HUs.** Son la fuente del qué. El [catálogo](catalog.md) es el índice; no abras todas.
 
-El trabajo se orquesta en el [runbook](../07-runbooks/), no aquí.
+Jerarquía: módulo → épica → feature → `HU-NNN-slug.md`.
+
+Una spec en `06-specs/` se puede rehacer. Una HU no se sustituye por esa spec.
+
+El [runbook](../07-runbooks/) solo ordena compose/implement.

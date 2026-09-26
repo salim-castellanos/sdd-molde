@@ -8,7 +8,7 @@ La tabla vive en `docs/00-howto/lecciones.md`. No se copia a `AGENTS.md`. Las re
 
 ## Cuándo cargarlo
 
-Cerrar un runbook (G5). G4 falló por ambiente. “No abre localhost”. Puerto ocupado. “Ejecuta el runbook” y el runtime no es el del corte. El usuario pide lecciones / postmortem.
+Al **empezar** un paso `implement` (antes de Compose o de `npm`). Cerrar un runbook (G5). G4 falló por ambiente. “No abre localhost”. Puerto ocupado. “Ejecuta el runbook” y el runtime no es el del corte. El usuario pide lecciones / postmortem.
 
 ## Cuándo no
 
@@ -23,6 +23,6 @@ Redactar una HU. Elegir copy. Un typo.
 
 ## Si aplica, cargar
 
-- [docs/00-howto/lecciones.md](../00-howto/lecciones.md) — tabla del molde
-- En `example/`: [example/LECCIONES.md](../../example/LECCIONES.md)
+- En la instancia: `LECCIONES.md` (entero; es el operativo).
+- [docs/00-howto/lecciones.md](../00-howto/lecciones.md) — solo filas `inbox`. Las `promoted` ya están en el gate; no se releen.
 - G5: `docs/02-gates/quality-gates.md`

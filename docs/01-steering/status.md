@@ -10,6 +10,14 @@ Es un **rollup**. La verdad operativa sigue en el runbook y en el status de cada
 
 “¿En qué vamos?”, “avance”, “informe ejecutivo”, “actualiza el estado”, al **crear** o **cerrar un paso** de runbook.
 
+## Dos STATUS
+
+Si existe `example/STATUS.md`, “¿en qué vamos?” del producto es ese archivo. El `STATUS.md` de la raíz es el arquetipo.
+
+## Cola
+
+La cola es la línea **Siguiente**. El % no ordena el trabajo. Un runbook `awaiting-human` (implement hecho, el cierre lo reserva el humano) no es el siguiente paso y no se marca `closed` desde el agente.
+
 ## Cuándo no
 
 Para componer o implementar: el runbook activo. `STATUS.md` no sustituye el paso corriente.
@@ -20,7 +28,7 @@ Para componer o implementar: el runbook activo. `STATUS.md` no sustituye el paso
 2. Mira `docs/06-specs/` y el frontmatter `status` de cada spec que exista.
 3. Lee frontmatter / tabla de `docs/07-runbooks/README.md` y el runbook que haya cambiado.
 4. Aplica la fórmula de `STATUS.md` (0 / 50 / 100 por HU).
-5. Reescribe `STATUS.md` (fecha, tablas, siguiente paso). Si el corte tiene UI o api alcanzable, una línea **Probar:** con la URL que abre. Una línea en el README solo si el enlace o el resumen de una frase cambió — **no dupliques los %** en el README.
+5. Reescribe `STATUS.md` (fecha, tablas, siguiente paso). Si el corte tiene UI o api alcanzable, una línea **Probar:** con la URL que abre. Si hay semilla local, email y contraseña de esa cuenta en la misma línea (no es un demo de producto). Una línea en el README solo si el enlace o el resumen de una frase cambió — **no dupliques los %** en el README.
 
 Mismo turno que el runbook. No “ya lo actualizo después”.
 

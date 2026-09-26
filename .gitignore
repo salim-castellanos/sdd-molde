@@ -34,6 +34,7 @@ npm-debug.log*
 .cursor/*.log
 tmp/
 .cache/
+/publicaciones/
 
 # Instancia Mistratos: repo git propio (no se versiona en el molde)
 /example/

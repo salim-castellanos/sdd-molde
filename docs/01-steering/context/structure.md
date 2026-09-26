@@ -18,7 +18,7 @@ No hay `.kiro/`. Kiro lee `AGENTS.md`. Card `ide`.
 
 ## Documentación (orden de lectura)
 
-`00-howto` → `01-steering/catalog.md` (padre) → cards de steering → docs que la card apunta → HU → runbook → spec compuesta → `apps/`.
+`00-howto` → `01-steering/catalog.md` (padre) → cards → **HU** (`05-backlog/catalog.md`) → runbook → spec compuesta → `apps/`. La HU es la fuente del qué; spec y runbook no la sustituyen.
 
 ## Dónde nace el código (cuando se implemente)
 

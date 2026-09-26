@@ -6,7 +6,9 @@ delivery_pct: 8
 
 # Estado — Clave
 
-Informe ejecutivo. **Derivado**: se recalcula desde el catálogo de HUs + specs + runbooks. No se edita a mano “porque sí”.
+Arquetipo (identidad de ejemplo). Si en este workspace existe `example/STATUS.md`, el producto vivo es ese archivo (Mistratos). La cola del agente es la línea **Siguiente** de allí, no el porcentaje más alto de ningún runbook.
+
+Informe ejecutivo de **este** árbol. **Derivado**: se recalcula desde el catálogo de HUs + specs + runbooks. No se edita a mano “porque sí”.
 
 | | |
 | --- | --- |
@@ -52,6 +54,6 @@ Informe ejecutivo. **Derivado**: se recalcula desde el catálogo de HUs + specs 
 1. Cada HU: `0` backlog · `50` in-spec · `100` done. Evidencia: existe `docs/06-specs/…` con status ≥ `task-ready` → 50; status `implemented` o `closed` → 100.
 2. Feature = promedio de sus HUs. Épica = promedio de features. Módulo = promedio de épicas.
 3. Producto = promedio de módulos que tienen al menos una épica. No cuentes `[RELLENAR 01-…]`.
-4. Entrega = promedio de `progress` en `docs/07-runbooks/*/runbook.md`.
+4. Entrega = promedio de `progress` en `docs/07-runbooks/*/runbook.md`. Un runbook `awaiting-human` sigue en el promedio y no es la cola.
 
 Al crear o avanzar un runbook, este archivo se reescribe **en el mismo turno**. Card: `docs/01-steering/status.md`.

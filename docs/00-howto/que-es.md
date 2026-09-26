@@ -8,7 +8,7 @@ No es un producto de negocio. El producto lo escribes tú al hacer fork (`docs/0
 
 ## En una frase
 
-Un solo contrato de agente, un catálogo que decide qué leer, un runbook que ordena el corte, una spec **compuesta** (no una HU suelta) y gates antes de decir “listo”.
+Un solo contrato de agente, un catálogo que decide qué leer, **HUs que viven** (`05-backlog`), un runbook que ordena el corte, una spec **compuesta** (rehacible desde la HU) y gates antes de decir “listo”.
 
 ## No es BMAD
 

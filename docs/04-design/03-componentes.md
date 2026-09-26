@@ -15,8 +15,10 @@ Inventario. Si no está aquí, no se inventa un kit.
 | Toast | no | — | [RELLENAR] |
 | IconButton | no | — | |
 | Icono UI | [RELLENAR] | nav | Lucide o equivalente. **No** logos de marca. |
-| Icono de marca | [RELLENAR] | OAuth si la HU lo pide | Tabler brands / Simple Icons. No Lucide. |
+| Icono de marca | [RELLENAR] | OAuth si la HU lo pide | Glifo del proveedor (Tabler brands / Simple Icons), 20px. El **botón** es el secundario del producto. El glifo **puede** llevar el color de esa marca. Don't: Lucide; don't: pintar el botón entero de Meta/Google. |
 
 [RELLENAR: añade Button secundario, Select, etc. cuando una HU lo pida.]
 
 Cada componente nuevo = fila + (si es visualmente rico) un do/don't de una línea.
+
+**WidgetCard / KPI:** vacío = cero. Don't: COP (u otro monto largo) a tamaño KPI en tile estrecho — ver patrón *Cifras*.

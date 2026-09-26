@@ -16,8 +16,8 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 1. Este archivo y `docs/01-steering/catalog.md`.
 2. Solo las cards cuyo trigger coincide. Cada card dice qué doc cargar.
-3. Si entregas producto: runbook **activo** en `docs/07-runbooks/`. Paso corriente. Al crear o avanzar el runbook, reescribe `STATUS.md` (card `status`). Al **cerrar** (G5): card `lecciones`.
-4. “¿En qué vamos?” → `STATUS.md`, no el runbook entero.
+3. Si entregas producto: el runbook cuyo paso es `compose` o `implement`. `awaiting-human` no es la cola. Al avanzar, reescribe `STATUS.md` (card `status`). Al empezar `implement` y al cerrar (G5): card `lecciones`.
+4. “¿En qué vamos?” → `STATUS.md`. Si existe `example/STATUS.md`, el producto de este workspace es ese archivo; la cola es su **Siguiente**, no el % más alto.
 5. No cargues todas las HUs, specs ni `context/`.
 6. Procedimiento: `docs/00-howto/sdd-loop.md`. Carga fina: card `carga`.
 
@@ -27,11 +27,11 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 
 | Pregunta | Sitio |
 | --- | --- |
+| ¿Qué necesita el usuario (**fuente del qué**)? | `docs/05-backlog/catalog.md` → **una** HU |
 | ¿Qué steering abro? | `docs/01-steering/catalog.md` |
 | ¿Qué es una HU / spec / runbook? | cards `historia`, `especificacion`, `runbook` |
-| ¿Backlog (módulo → épica → feature → HU)? | `docs/05-backlog/catalog.md` |
-| ¿Specs compuestas? | `docs/06-specs/` |
-| ¿En qué vamos / avance ejecutivo? | `STATUS.md` |
+| ¿Specs (se pueden **rehacer** si la HU vive)? | `docs/06-specs/` |
+| ¿En qué vamos / avance ejecutivo? | `STATUS.md` (si existe `example/STATUS.md`, ese; cola = **Siguiente**) |
 | ¿En qué paso de entrega? | `docs/07-runbooks/` |
 | ¿Cómo se ejecuta el loop? | `docs/00-howto/sdd-loop.md` |
 | ¿Gates? | `docs/02-gates/` |
@@ -42,26 +42,24 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 ## Loop
 
 ```
-catalog (padre)
+HU (qué; vive en 05-backlog)
     ↓
- runbook (secuencia + estado)
+ runbook (orden + estado)
     ↓
- analyze → compose spec (HU + diseño + arch + gates + cards) → G1–G3
+ compose spec (HU + diseño + arch + gates + cards) → G1–G3
     ↓
  implement spec → G4
     ↓
- siguiente paso del runbook → G5 al cerrar
+ siguiente HU del runbook → G5 al cerrar
     ↓
  STATUS.md (mismo turno)
-    ↓
- lecciones (G5: fila si dolió; promover a gate/loop)
 ```
 
-Una spec no se crea para ejecutar. Se compone en el runbook y se ejecuta en el paso siguiente.
+La HU es la fuente del qué. La spec se **compone** (y se puede volver a componer). El runbook solo ordena. No se crea una spec para “tener con qué codear”.
 
 ## No hagas
 
-- No implementes desde una HU. Compón la spec primero.
+- No implementes desde una HU ni desde el chat. **SPEC FIRST:** se escribe o se actualiza la spec, después `apps/`. Copy y mensajes también. Constitución I.
 - No implementes infra ni plataforma (Docker, Compose, cluster) sin documentar antes (arch / ADR).
 - No cierres G4 ni un `implement` porque “se probó a mano”. La spec nombra la batería; esas pruebas tienen que existir y pasar.
 - No crees una spec porque “hay que codear”. Abre o crea un runbook.
@@ -72,6 +70,8 @@ Una spec no se crea para ejecutar. Se compone en el runbook y se ejecuta en el p
 - No agregues una carpeta muda. Card `ide`.
 - No dejes un arreglo solo en `example/` si el hueco es del molde. `GAPS.md` + parche a `docs/`.
 - No cierres G4 con tests verdes si el humano no tiene una URL del corte que abre.
+- No cierres G4 de un corte con libro sin semilla local ni credenciales en `STATUS.md` **Probar:**. No reintroduzcas un usuario demo en la imagen.
+- No cierres G4 porque el api Compose está healthy si el web (Vite) no escucha. No asumas que el contenedor tiene el código que acabas de escribir: rebuild del servicio tocado.
 
 ## Convenciones
 

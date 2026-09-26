@@ -1,6 +1,6 @@
 # AGENTS.md — backlog
 
-Insumos. No implementes. No cuelgues HUs en la raíz.
+Fuente del qué. No implementes. No cuelgues HUs en la raíz. No dejes que la spec “reemplace” a la HU.
 
 Lee [catalog.md](catalog.md). Abre **una** HU. Épica/feature solo para partir o trazar.
 

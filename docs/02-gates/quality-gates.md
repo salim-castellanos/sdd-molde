@@ -18,6 +18,7 @@ Antes de escribir `plan.md`.
 - [ ] Sección **Insumos** lista HU + diseño + arch + steerings + gates (rutas concretas).
 - [ ] Cubre el flujo completo: datos/BD, api, pantalla, validación, mensajes, authn/authz y **pruebas por capa** (unitaria, integración, e2e HTTP, e2e Playwright si hay UI) o “no aplica” en cada una.
 - [ ] La spec no inventa comportamiento que no esté en la HU o en un insumo. Si la HU nombra una política/tope **sin cifra**, la cifra queda en la HU o en un insumo **en este compose**.
+- [ ] Lo que esté en `PARKING.md` (instancia) o en la lista “fuera” del runbook no aparece en **In scope**. Se anota ahí; no se implementa en este corte.
 - [ ] In/out of scope está escrito.
 - [ ] No hay decisiones de librerías (eso es plan).
 - [ ] Un humano diría “sí, eso es lo que quiero”.
@@ -47,8 +48,12 @@ Antes de escribir `plan.md`.
 
 - [ ] Tasks del corte `[x]`.
 - [ ] Pasan las pruebas que la spec nombró (unitaria, integración/humo, e2e). Curl o el chat no cuentan.
-- [ ] Runtime del corte: **un** Compose (`docker compose ls` / `docker ps`); los puertos del corte no los tiene otro proyecto.
+- [ ] Verificación: cada fila de **Pruebas** tiene el test que nombra. El assert sale del AC y de **Qué se invoca**. **Qué falla si se rompe** es el síntoma, no el valor esperado.
+- [ ] Runtime del corte: **un** Compose para lo que corre en Docker (`docker compose ls` / `docker ps`); los puertos del corte no los tiene otro proyecto.
+- [ ] Si la URL del corte es Vite (u otro dev server) **en el host**, ese puerto **está escuchando**. Un api Compose healthy **no** prueba que `/` abre.
+- [ ] Si el humano habla con una **imagen** Compose del api: esa imagen es el código de este implement (`up -d --build` del servicio tocado). Un e2e contra otro puerto de test no cierra G4 solo.
 - [ ] `STATUS.md` (o README) tiene la **URL del corte** y esa URL abre. Tests verdes no bastan.
+- [ ] Si el corte deja un libro que el humano puede clicar: semilla local corrida contra el runtime del corte, escenarios del corte **añadidos**, credenciales en **Probar:** (no un demo en la imagen).
 - [ ] Sin secretos nuevos.
 - [ ] Sin rutas fuera de `docs/04-design/`.
 
@@ -63,9 +68,23 @@ Antes de escribir `plan.md`.
 - [ ] `context/` sigue siendo verdad.
 - [ ] `STATUS.md` coincide con runbooks + specs.
 - [ ] Card `lecciones`: fila nueva si el corte dolió en ejecución, o explícito “ninguna nueva”. Si la regla debe repetirse, se **promueve** a gate/loop/card en el mismo turno.
+- [ ] No se reejecuta el **Probar** histórico de un runbook anterior. El **Probar** vigente es el de `STATUS.md`.
+- [ ] Si el cierre dice que lo ve el humano (IdP, pantalla, “luego G5”), el runbook queda `awaiting-human`. El agente no lo marca `closed`.
 
 **Status runbook:** `closed`
 
 ## Estados de una spec
 
 `draft` → `spec-ready` → `plan-ready` → `task-ready` → `implemented` → `closed`
+
+Dos specs `implemented` de la misma HU: la nueva lleva `supersedes` (id de la anterior) y la anterior `superseded-by` (id de la nueva). La vigente es la que no tiene `superseded-by`. Las dos siguen en `implemented`.
+
+## Estados de un runbook
+
+`in-progress` — el paso corriente es `analyze`, `compose` o `implement`. Es el activo.  
+`awaiting-human` — el implement del corte está `done` y el `close` lo reserva el humano. Sigue en el promedio de entrega. No es la cola. No bloquea otro runbook en `compose` o `implement`.  
+`closed` — G5 hecho.
+
+## Índice
+
+`node docs/02-gates/check-index.mjs` en la raíz del molde. Sobre la instancia: `node docs/02-gates/check-index.mjs example`. Falla si hay dos archivos con el mismo `id` de HU, o dos specs `implemented` de la misma HU sin el par `supersedes` / `superseded-by`.

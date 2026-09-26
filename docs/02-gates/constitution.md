@@ -2,19 +2,24 @@
 
 Principios siempre verdaderos. Si solo aplica a veces, no pertenece aquí.
 
-## I. Runbook antes que spec, spec antes que código
+## I. SPEC FIRST — spec antes que código
 
-WHEN se vaya a entregar comportamiento,
-THE trabajo SHALL vivir en un runbook en `docs/07-runbooks/`
-AND una spec SHALL existir solo como resultado de un paso `compose`
-AND el código SHALL implementar esa spec, no la HU cruda ni el chat.
+WHEN se vaya a crear o **cambiar** comportamiento (feature, copy, mensaje, 401, pantalla, contrato, kit de producto),
+THE spec SHALL escribirse o actualizarse **antes** de mutar `apps/`
+AND el código SHALL implementar esa spec, no la HU cruda ni el chat
+AND el trabajo SHALL vivir en un runbook en `docs/07-runbooks/`
 AND `STATUS.md` SHALL reescribirse en el mismo trabajo (rollup, no una verdad paralela).
 
-## II. La HU es insumo, no ejecutable
+THE agente SHALL NOT parchear `apps/` y “actualizar la spec después”.
+Typo y lint que **no** cambian el “qué”: sí, sin compose.
+
+## II. La HU es la fuente del qué, no el ejecutable
 
 WHERE hay una necesidad de usuario,
 THE SHALL documentarse como HU bajo `docs/05-backlog/<módulo>/E-…/F-…/HU-NNN-slug.md`.
-THE spec SHALL componerse a partir de esa HU más diseño, arquitectura, gates y steerings aplicables.
+THE HU SHALL ser la fuente del “qué”.
+THE spec SHALL componerse a partir de esa HU más diseño, arquitectura, gates y steerings aplicables
+AND MAY rehacerse si esos insumos siguen.
 THE plantilla SHALL NOT tratar la spec como el lugar donde “vive” la historia.
 
 ## III. Carga mínima
@@ -47,7 +52,7 @@ THE implementación de su spec SHALL incluir al menos una prueba que falle si es
 
 ## VIII. Sin drift
 
-IF el código cambia el comportamiento, THEN la spec y, si aplica, la HU se actualizan en el mismo trabajo.
+IF el comportamiento cambia, THEN la spec se actualiza **primero** (I) AND el código después, en el mismo trabajo. Si aplica, la HU también.
 IF la HU cambia, THEN el runbook reabre el paso `compose` de esa HU.
 
 ## IX. Parar en el gate

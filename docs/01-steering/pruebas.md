@@ -2,7 +2,7 @@
 
 ## Cuándo cargarlo
 
-Batería, unitarias, humo, integración, e2e HTTP, Playwright, “¿cerramos G4?”, “probé con curl”, qué test va en la spec.
+Batería, unitarias, humo, integración, e2e HTTP, Playwright, “¿cerramos G4?”, “probé con curl”, qué test va en la spec, semilla local, “usuario para probar”.
 
 ## Cuándo no
 

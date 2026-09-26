@@ -22,16 +22,16 @@ AGENTS.md + catalog.md (padre)
          STATUS.md (rollup)
 ```
 
-La spec es un **resultado**. El runbook es quien decide el orden (paleta antes que crear carro).
+La HU es la **fuente del qué**. La spec es un **resultado** (se puede rehacer con otro modelo si la HU y los insumos siguen). El runbook solo ordena (paleta antes que crear carro).
 
 ## Roles
 
 | Artefacto | Pregunta | No es |
 | --- | --- | --- |
-| HU | ¿Quién necesita qué y por qué? | Ejecutable |
-| Diseño / arch / gates / cards | Insumos | La spec |
-| Spec | ¿Qué es correcto **después** de unir insumos? | El backlog |
-| Runbook | ¿En qué orden y en qué paso vamos? | Una spec larga |
+| HU | ¿Quién necesita qué y por qué? **Vive en `05-backlog`.** | Ejecutable / spec |
+| Diseño / arch / gates / cards | Insumos al componer | La necesidad |
+| Spec | ¿Qué es correcto **después** de unir la HU con esos insumos? | El backlog; no se guarda “en vez de” la HU |
+| Runbook | ¿En qué orden y en qué paso vamos? | Una spec larga ni un dump de HUs |
 | `STATUS.md` | ¿Cómo va el producto? (ejecutivo) | El paso a paso |
 | Código | ¿Cómo quedó? | La fuente del “qué” |
 
@@ -45,7 +45,7 @@ La spec es un **resultado**. El runbook es quien decide el orden (paleta antes q
 
 ## Qué no saltarse
 
-De HU a PR es un defecto de proceso. Typo y lint, sí. Si el arreglo cambia comportamiento, se reabre el `compose`.
+**SPEC FIRST.** Cualquier modificación de comportamiento se escribe o se reabre en la spec **antes** de tocar `apps/`. Copy, labels, mensajes, 401, pantalla: también. De HU o del chat a PR es un defecto de proceso. Typo y lint que no cambian el “qué”: sí, directo.
 
 ## Procedimiento por fase
 
@@ -64,7 +64,7 @@ Precondición: runbook en paso `compose`. Si no hay runbook, créalo.
 
 ### Plan
 
-Spec en `spec-ready`. Lee la spec, no la HU. Card `tech` solo si toca stack. G2.
+Spec en `spec-ready`. Lee la spec, no la HU cruda (el compose ya unió). Si cambió el **qué**, primero la HU. Card `tech` solo si toca stack. G2.
 
 ### Tasks
 
@@ -72,9 +72,9 @@ Spec en `spec-ready`. Lee la spec, no la HU. Card `tech` solo si toca stack. G2.
 
 ### Implement
 
-Runbook en `implement` y spec `task-ready`. Si no, detente. Si el humano pidió **ejecutar el runbook**, recorre desde el paso corriente hasta cerrar: pasa el frontmatter a `implement` **antes** de mutar `apps/` (npm install, Compose).
+Runbook en `implement` y spec `task-ready`. Si no, detente. Antes de mutar `apps/`: si la instancia tiene `LECCIONES.md`, léelo. Del molde, solo las filas `inbox` de `docs/00-howto/lecciones.md` (las `promoted` ya están en G4). Si el humano pidió **ejecutar el runbook**, recorre desde el paso corriente hasta cerrar: pasa el frontmatter a `implement` **antes** de mutar `apps/` (npm install, Compose). Un runbook `awaiting-human` no es ese paso.
 
-Solo esas tasks. Escribe y corre la batería que la spec nombró (unit / integración / e2e). Curl no cierra G4. Antes de marcar `implement` done: `docker compose ls` + `docker ps` (un runtime del corte) y una URL que abre, escrita en `STATUS.md`. Actualiza `step` y `progress`. Reescribe `STATUS.md`.
+Solo esas tasks. Escribe y corre la batería que la spec nombró (unit / integración / e2e). Curl no cierra G4. Antes de marcar `implement` done: `docker compose ls` + `docker ps` (un proyecto Compose del corte). Si el web no es servicio Compose, el puerto de la URL (Vite) tiene que estar **escuchando** — levántalo (`npm run dev` en `apps/web` o el de la instancia). Si cambiaste el api que el humano usa por imagen: rebuild de **ese** servicio. Playwright: si **él** arrancó el `webServer`, al terminar lo mata; deja otra vez la URL del humano arriba. Escribe la URL en `STATUS.md`. Si hay libro que clicar: **último paso** = semilla local (escenarios del corte) y credenciales en **Probar:**. Verificación antes de dar el paso por `done`: cada fila de **Pruebas** tiene su test; el assert es el AC y **Qué se invoca**; **Qué falla si se rompe** es el síntoma. Actualiza `step` y `progress`. Reescribe `STATUS.md`. Si el cierre queda en manos del humano, status `awaiting-human`, no `closed`.
 
 ### Gate
 

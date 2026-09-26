@@ -8,7 +8,7 @@ It is not a business product. You write the product when you fork (`docs/01-stee
 
 ## In one sentence
 
-One agent contract, a catalog that decides what to load, a runbook that orders the cut, a **composed** spec (not a lone user story), and gates before anyone says “done”.
+One agent contract, a catalog that decides what to load, **HUs that live** (`05-backlog`), a runbook that orders the cut, a **composed** spec (rebuildable from the HU), and gates before anyone says “done”.
 
 ## It is not BMAD
 

@@ -5,4 +5,4 @@ alwaysApply: true
 
 # Puntero
 
-Lee `AGENTS.md` y `docs/01-steering/catalog.md`. El loop está en `docs/00-howto/sdd-loop.md`. No hay reglas extra aquí.
+Lee `AGENTS.md` y `docs/01-steering/catalog.md`. El loop está en `docs/00-howto/sdd-loop.md`. SPEC FIRST: constitución I. No hay reglas extra aquí.

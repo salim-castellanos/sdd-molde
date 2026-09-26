@@ -2,7 +2,7 @@
 
 ## Qué es
 
-Una spec **no se escribe para ejecutar**. Se **compone**. Es el flujo **completo** de **una** funcionalidad: datos/objetos de BD → api → pantalla → batería (unitaria, integración, e2e HTTP y, si hay UI, e2e Playwright). No termina en el api. Card `pruebas`.
+Una spec **no se escribe para ejecutar**. Se **compone** desde **una** HU. Sin HU no hay spec. Rehacer la spec (otro modelo, otro corte) es válido; perder la HU no. Es el flujo **completo** de **una** funcionalidad: datos/objetos de BD → api → pantalla → batería (unitaria, integración, e2e HTTP y, si hay UI, e2e Playwright). No termina en el api. Card `pruebas`.
 
 Insumos (ninguno se implementa solo):
 
@@ -22,7 +22,7 @@ El runbook tiene un paso “componer spec de HU-N” y después “ejecutar esa 
 
 ## Cuándo cargarlo
 
-El runbook está en un paso `compose`. O el usuario pregunta “cómo se arma una spec”.
+El runbook está en un paso `compose`. El usuario pregunta “cómo se arma una spec”. **Cualquier** cambio de comportamiento (copy, 401, pantalla): se reabre o se delta la spec **antes** de codear (SPEC FIRST).
 
 ## Cuándo no
 
@@ -35,7 +35,10 @@ El usuario acaba de dictar una idea: primero es HU, no spec. “Implementa login
 3. Carga solo los docs que esas cards listen.
 4. Escribe `docs/06-specs/NNN-slug/spec.md` con sección **Insumos** (rutas concretas). Template: `docs/08-templates/spec.md`.
 5. Plan y tasks salen de **esa** spec, no de la HU cruda.
-6. Gate G1 sobre la spec compuesta.
+6. Si el producto tiene dashboard, la spec dice **Tablero** (qué widget mueve, o *no aplica*).
+7. Si ya hay una spec `implemented` de esta HU, la nueva lleva `supersedes` y la anterior `superseded-by`. La vigente es la que no tiene `superseded-by`.
+8. Lo que no es de esta HU (aparcamiento, lista “fuera” del runbook) no entra en **In scope**.
+9. Gate G1 sobre la spec compuesta.
 
 ## Si aplica, cargar
 

@@ -9,7 +9,7 @@ Jerarquía: **módulo → épica → feature → HU**.
 | Módulo | ¿Transversal o un contexto de negocio? | Un dump de HUs |
 | Épica | ¿Qué outcome agrupa features? | Una HU gorda |
 | Feature | ¿Qué incremento se parte en HUs? | Un sprint |
-| HU | ¿Quién necesita qué y por qué? (EARS) | Ejecutable / spec |
+| HU | ¿Quién necesita qué y por qué? (EARS). **Fuente del qué:** se puede rehacer la spec si esta HU existe. | Ejecutable / spec |
 
 Auth y autorización van en `00-transversal`. “Crear carro” no.
 
@@ -20,6 +20,8 @@ Crear o partir necesidades. “Quiero un login”. “La paleta es otra HU”.
 ## Cuándo no
 
 Implementar. Eso es spec + runbook.
+
+Una spec **no sustituye** a la HU. Si solo queda la spec, se perdió la necesidad.
 
 ## Cómo se crea
 
