@@ -16,8 +16,8 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 1. Este archivo y `docs/01-steering/catalog.md`.
 2. Solo las cards cuyo trigger coincide. Cada card dice qué doc cargar.
-3. Si entregas producto: el runbook cuyo paso es `compose` o `implement`. `awaiting-human` no es la cola. Al avanzar, reescribe `STATUS.md` (card `status`). Al empezar `implement` y al cerrar (G5): card `lecciones`.
-4. “¿En qué vamos?” → `STATUS.md`. Si existe `example/STATUS.md`, el producto de este workspace es ese archivo; la cola es su **Siguiente**, no el % más alto.
+3. Si entregas producto: el runbook cuyo paso es `compose` o `implement`. `ai-tested` no es la cola. `closed` solo si el humano dice que lo usó. Al avanzar, reescribe `STATUS.md` (card `status`). Al empezar `implement` y al cerrar (G5): card `lecciones`.
+4. “¿En qué vamos?” o “¿qué falta por implementar?” → `STATUS.md`. Si existe `example/STATUS.md`, el producto de este workspace es ese archivo. La cola de desarrollo es su **Siguiente**. `ai-tested` está terminado por la IA y no bloquea otro corte.
 5. No cargues todas las HUs, specs ni `context/`.
 6. Procedimiento: `docs/00-howto/sdd-loop.md`. Carga fina: card `carga`.
 
@@ -38,6 +38,7 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 | ¿Código? | `apps/*` (tu fork) · `example/apps/` (instancia, cuando exista spec) |
 | ¿Hueco del molde al usar el ejemplo? | `example/GAPS.md` + card `example` |
 | ¿Qué dolió al ejecutar (puertos, URL, G4 ambiente)? | card `lecciones` |
+| ¿Arrancar, parar o ver si el corte escucha? | card `harness` |
 
 ## Loop
 

@@ -21,4 +21,8 @@ Inventario. Si no está aquí, no se inventa un kit.
 
 Cada componente nuevo = fila + (si es visualmente rico) un do/don't de una línea.
 
+## Cursor
+
+Lo que se puede pulsar se ve pulsable. `a` con href, `button` habilitado, `select`, `summary` y `[role=button]` usan `cursor: pointer`. Deshabilitado: `cursor: not-allowed`. No hace falta repetirlo en cada componente: una regla global. Tailwind deja el `button` en `cursor: default`; esa regla global va **después** y gana.
+
 **WidgetCard / KPI:** vacío = cero. Don't: COP (u otro monto largo) a tamaño KPI en tile estrecho — ver patrón *Cifras*.

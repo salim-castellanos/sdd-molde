@@ -58,8 +58,8 @@ Antes de escribir `plan.md`.
 - [ ] Sin rutas fuera de `docs/04-design/`.
 
 **Status spec:** `implemented`  
-**Runbook:** paso `implement` → `done`; `step` y `progress` actualizados.  
-**STATUS.md:** HU → `done` (100). Reescribe el rollup.
+**Runbook:** paso `implement` → `done`; el runbook pasa a `ai-tested`. No a `closed`.  
+**STATUS.md:** HU → `done` (100). Reescribe el rollup. En **Probado por la IA** entra este corte. No entra en **Aceptado por el humano**.
 
 ## G5 — No drift (cierre de runbook)
 
@@ -69,9 +69,9 @@ Antes de escribir `plan.md`.
 - [ ] `STATUS.md` coincide con runbooks + specs.
 - [ ] Card `lecciones`: fila nueva si el corte dolió en ejecución, o explícito “ninguna nueva”. Si la regla debe repetirse, se **promueve** a gate/loop/card en el mismo turno.
 - [ ] No se reejecuta el **Probar** histórico de un runbook anterior. El **Probar** vigente es el de `STATUS.md`.
-- [ ] Si el cierre dice que lo ve el humano (IdP, pantalla, “luego G5”), el runbook queda `awaiting-human`. El agente no lo marca `closed`.
+- [ ] El humano dijo, en este trabajo, que usó el corte y le cuadra. Una prueba del agente (browser, api, tests) no cumple esta fila.
 
-**Status runbook:** `closed`
+**Status runbook:** `closed` solo con esa frase del humano. Si solo lo probó el agente, se queda en `ai-tested`.
 
 ## Estados de una spec
 
@@ -81,9 +81,15 @@ Dos specs `implemented` de la misma HU: la nueva lleva `supersedes` (id de la an
 
 ## Estados de un runbook
 
-`in-progress` — el paso corriente es `analyze`, `compose` o `implement`. Es el activo.  
-`awaiting-human` — el implement del corte está `done` y el `close` lo reserva el humano. Sigue en el promedio de entrega. No es la cola. No bloquea otro runbook en `compose` o `implement`.  
-`closed` — G5 hecho.
+`in-progress` — se está componiendo o implementando. Es lo que falta por desarrollar.  
+`ai-tested` — el desarrollo terminó y el agente lo probó (tests, api o browser). El humano no lo ha dado por bueno. No bloquea el siguiente corte.  
+`closed` — el humano lo usó y lo aceptó. El agente no pone `closed` porque él mismo lo haya clicado.
+
+`awaiting-human` no se usa: decía “espera” y se leía como trabajo sin hacer.
+
+## Qué falta
+
+Si preguntan “qué falta por implementar”, la respuesta son solo los `in-progress` y las HUs sin spec. Los `ai-tested` se listan aparte: terminados y probados por la IA, sin visto humano. Los `closed` no faltan.
 
 ## Índice
 

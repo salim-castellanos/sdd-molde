@@ -6,6 +6,6 @@ Un runbook = un corte de entrega. Guarda secuencia, estado y %. Las HUs del cort
 | --- | --- | --- | --- | --- |
 | [001-identidad](001-identidad/runbook.md) | HUs 001–005 de Clave | `in-progress` | 2 | 8 |
 
-Activo = el runbook cuyo paso es `compose` o `implement`. El agente carga **ese**. `awaiting-human` espera al humano, sigue en el promedio de entrega y no es la cola.
+Activo = el runbook cuyo paso es `compose` o `implement`. El agente carga **ese**. `ai-tested` = terminado y probado por la IA, sin visto humano; no es la cola. `closed` = lo aceptó el humano.
 
 El rollup ejecutivo no vive aquí: [STATUS.md](../../STATUS.md). Esta tabla alimenta `delivery_pct`.

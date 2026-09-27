@@ -8,7 +8,7 @@ La tabla vive en `docs/00-howto/lecciones.md`. No se copia a `AGENTS.md`. Las re
 
 ## Cuándo cargarlo
 
-Al **empezar** un paso `implement` (antes de Compose o de `npm`). Cerrar un runbook (G5). G4 falló por ambiente. “No abre localhost”. Puerto ocupado. “Ejecuta el runbook” y el runtime no es el del corte. El usuario pide lecciones / postmortem.
+Al **empezar** un paso `implement` (antes de Compose o de `npm`). Cerrar un runbook (G5). G4 falló por ambiente. “No abre localhost”. Puerto ocupado. “Ejecuta el runbook” y el runtime no es el del corte. El usuario pide lecciones / postmortem. Si la tarea es arrancar o parar, card `harness` (no se improvisa el comando).
 
 ## Cuándo no
 

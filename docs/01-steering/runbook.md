@@ -31,7 +31,7 @@ Editar un steering o un ADR sin entregar producto.
 6. Cada vez que un paso termina, se actualiza status, % y descripción. El % es pasos `done` / total.
 7. En el **mismo turno**, card `status`: reescribe `STATUS.md`. Al cerrar el runbook: card `lecciones`.
 
-Activo = paso corriente `compose` o `implement`. `awaiting-human` no se carga como cola. El % no elige el siguiente: lo elige **Siguiente** en `STATUS.md`.
+Activo = paso corriente `compose` o `implement`. `ai-tested` no se carga como cola: ya está desarrollado. El % no elige el siguiente: lo elige **Siguiente** en `STATUS.md`.
 
 ## Si aplica, cargar
 

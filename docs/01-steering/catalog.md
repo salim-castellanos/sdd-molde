@@ -25,5 +25,6 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | pruebas | unitarias, humo, e2e, G4, “probé con curl” | [pruebas.md](pruebas.md) | `docs/00-howto/pruebas.md` + sección Pruebas de la spec |
 | example | trabajar en example/, hueco del molde, GAPS | [example.md](example.md) | `example/README.md` + `example/GAPS.md` |
 | lecciones | al empezar `implement`, cerrar runbook, G4 por ambiente, puerto ocupado, “no abre localhost”, postmortem, “qué aprendimos” | [lecciones.md](lecciones.md) | [../00-howto/lecciones.md](../00-howto/lecciones.md) · en example: `example/LECCIONES.md` |
+| harness | arrancar, parar, reiniciar, puerto, Compose, Vite, semilla, rebuild, “no abre localhost” | [harness.md](harness.md) | [../00-howto/harness.md](../00-howto/harness.md) · en example: `example/harness.profile.json` |
 
 Constitución y gates no son steering: `docs/02-gates/`. Se leen al cruzar de fase, no al abrir el chat.

@@ -16,7 +16,15 @@ Si existe `example/STATUS.md`, “¿en qué vamos?” del producto es ese archiv
 
 ## Cola
 
-La cola es la línea **Siguiente**. El % no ordena el trabajo. Un runbook `awaiting-human` (implement hecho, el cierre lo reserva el humano) no es el siguiente paso y no se marca `closed` desde el agente.
+La cola de **desarrollo** es la línea **Siguiente** (un `in-progress`). El % no ordena el trabajo.
+
+“¿Qué falta por implementar?” responde con tres listas, en este orden:
+
+1. **Por implementar** — runbooks `in-progress` y HUs en `backlog`.
+2. **Probado por la IA** — `ai-tested`. Terminado. No lo bloquea el visto humano. Se puede abrir otro corte.
+3. **Aceptado por el humano** — `closed`. Solo si el humano dijo que lo usó.
+
+El agente no mueve un corte de `ai-tested` a `closed` porque lo haya probado él.
 
 ## Cuándo no
 

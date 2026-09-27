@@ -52,6 +52,7 @@ No reinventamos el loop. Lo hacemos **visible en `docs/`**, no escondido en un d
 - **Delta specs (OpenSpec):** cuando el sistema ya existe, el cambio describe ADDED / MODIFIED / REMOVED, no reescribe el mundo. El template de spec lo contempla.
 - **Gates medibles:** hoy son checklists. El siguiente paso natural son checks en CI que fallen si no hay spec, o evals de agente (línea AXIS / eval gates).
 - **Skills como progressive disclosure:** el loop SDD es un skill del repo, no un prompt pegado. Compatible con el modelo de Cursor (rules cortas + skills bajo demanda).
+- **Harness:** operar el runtime es una herramienta MCP (`outputSchema` + `structuredContent`, spec 2025-06-18) con chequeos semánticos encima del esquema. Contrato: [harness.md](harness.md). El ejecutable viene después.
 - **`AGENTS.md` anidado por app:** cuando `apps/web` y `apps/api` diverjan, cada una trae lo suyo. Ya hay placeholder.
 
 ## Un contrato, no uno por creador

@@ -11,5 +11,6 @@ No hay design system. Hay restricciones para que el agente no improvise una marc
 - Password: input type password; no mostrar fortaleza fancy, solo la regla de la spec.
 - No ilustraciones decorativas. Foto del producto (si el kit la usa) no es ilustración.
 - No OAuth inventado. Si una HU lo pide: label + **icono de marca**. El botón queda secundario del producto; el glifo puede ser el color del proveedor (el “azulito”), no el botón entero.
+- Cursor: lo accionable (enlace, botón, select) lleva manito. Deshabilitado, `not-allowed`. Una regla global, no una clase por botón. Ver `03-componentes.md`.
 
 Si más adelante hay marca, se escribe aquí y se referencia desde el plan, no al revés.

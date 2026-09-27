@@ -54,6 +54,6 @@ Informe ejecutivo de **este** árbol. **Derivado**: se recalcula desde el catál
 1. Cada HU: `0` backlog · `50` in-spec · `100` done. Evidencia: existe `docs/06-specs/…` con status ≥ `task-ready` → 50; status `implemented` o `closed` → 100.
 2. Feature = promedio de sus HUs. Épica = promedio de features. Módulo = promedio de épicas.
 3. Producto = promedio de módulos que tienen al menos una épica. No cuentes `[RELLENAR 01-…]`.
-4. Entrega = promedio de `progress` en `docs/07-runbooks/*/runbook.md`. Un runbook `awaiting-human` sigue en el promedio y no es la cola.
+4. Entrega = promedio de `progress` en `docs/07-runbooks/*/runbook.md`. `ai-tested` cuenta como desarrollo hecho y no es “falta implementar”. `closed` es solo la aceptación humana.
 
 Al crear o avanzar un runbook, este archivo se reescribe **en el mismo turno**. Card: `docs/01-steering/status.md`.
