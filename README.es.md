@@ -2,7 +2,7 @@
 
 [English](./README.md) | **Español**
 
-Plantilla de **Spec-Driven Development** para un solo agente. Un `AGENTS.md`, un catálogo, un runbook. Sin orquesta de roles.
+Plantilla de **Spec-Driven Development** para una persona. Un `AGENTS.md`, un catálogo, un runbook. El agente del chat es el **orquestador**: abre el rol del paso. Los roles dejan los descubrimientos en una mesa junto a ese runbook, no en un pack de vendor.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -12,14 +12,15 @@ El contrato del agente es [AGENTS.md](AGENTS.md). El avance del producto de ejem
 
 ## Para quién
 
-Quien construye con un agente (Cursor, Kiro, Copilot, Claude Code, Codex) y necesita un repo que ya sepa dónde vive cada cosa: historias, arquitectura, diseño, specs y código.
+Quien construye con un agente (Cursor, Kiro, Copilot, Claude Code, Codex) y necesita un repo que ya sepa dónde vive cada cosa: historias, arquitectura, diseño, specs y código. Una persona puede analizar, componer, implementar y probar. El orquestador elige el rol del paso.
 
-Si buscabas **BMAD**: ese método reparte el trabajo entre muchos agentes-rol. Molde es SDD **simplificado**: un agente, docs visibles, spec compuesta, gates. Comparación: [qué es](docs/00-howto/que-es.md).
+Si buscabas **BMAD**: ese método reparte el trabajo entre muchos agentes-rol y PRDs. Molde sigue más chico: un contrato, docs visibles, spec compuesta, gates. Si la herramienta puede lanzar un subagente, el orquestador lo usa para ese rol y le pide que lea y escriba la mesa. Si no puede, el mismo hilo cambia de rol. La mesa no depende de la herramienta. Comparación: [qué es](docs/00-howto/que-es.md).
 
 ## Qué resuelve
 
 - Un workspace listo: documentación, catálogos y huecos de `apps/`, no una carpeta vacía.
 - Un método único, portable: `AGENTS.md` + `docs/`. No un cerebro por herramienta.
+- Roles del paso (analizar, componer, implementar, probar) y una mesa común para que un descubrimiento no se quede en una sola respuesta.
 - El loop SDD de 2025–2026 (constitución → spec → plan → tasks → calidad) **visible** en `docs/`, no escondido en `.specify/` ni en packs de vendor.
 - Monorepo al empezar; cada app se puede extraer a submodule después.
 
@@ -60,6 +61,21 @@ flowchart TB
 
 El runbook no reemplaza la spec: ordena dependencias (autorización antes que registro) y actualiza [STATUS.md](STATUS.md).
 
+## Roles
+
+La persona sigue siendo una. El orquestador lee **Siguiente** en `STATUS.md` y abre un solo rol. Ese rol lee la card del paso y la mesa, y agrega lo que encontró. El orquestador no avanza el runbook mientras una nota abierta bloquee el paso.
+
+```mermaid
+flowchart LR
+  persona[Persona] --> orquestador[Orquestador]
+  orquestador --> rol[Rol del paso]
+  rol --> mesa[mesa.md]
+  mesa --> orquestador
+  orquestador --> status[STATUS.md]
+```
+
+Roles y el formato de la nota: [docs/00-howto/orquesta.md](docs/00-howto/orquesta.md).
+
 Qué entra en una spec: [docs/01-steering/especificacion.md](docs/01-steering/especificacion.md). Loop: [docs/00-howto/sdd-loop.md](docs/00-howto/sdd-loop.md). Por qué esta forma: [docs/00-howto/estado-del-arte.md](docs/00-howto/estado-del-arte.md).
 
 ## Layout
@@ -78,6 +94,7 @@ Qué entra en una spec: [docs/01-steering/especificacion.md](docs/01-steering/es
 | Tema | Dónde |
 | --- | --- |
 | Qué es Molde (vs BMAD, Spec Kit, Kiro) | [docs/00-howto/que-es.md](docs/00-howto/que-es.md) |
+| Orquestador, roles y la mesa | [docs/00-howto/orquesta.md](docs/00-howto/orquesta.md) |
 | Convención inglés / español | [docs/00-howto/i18n.md](docs/00-howto/i18n.md) |
 | Estado del ejemplo (Clave) | [STATUS.md](STATUS.md) |
 | Catálogo de steering | [docs/01-steering/catalog.md](docs/01-steering/catalog.md) |
