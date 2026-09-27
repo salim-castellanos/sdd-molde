@@ -38,6 +38,6 @@ sequenceDiagram
 - Siguiente:
 - Bloqueos:
 
-Al crear este archivo y al cerrar cada paso: reescribir `STATUS.md` (card `status`). Al cerrar el runbook: card `lecciones`.
+Al crear este archivo y al cerrar cada paso: reescribir `STATUS.md` (card `status`). Al empezar `analyze`: copiar [mesa.md](mesa.md) al lado de este runbook. Al cerrar el runbook: card `lecciones`. El orquestador no avanza el paso si la mesa tiene un `abierto` que bloquea.
 
 `status` del runbook: `in-progress` mientras el paso es `compose` o `implement`. Al pasar G4, `ai-tested` (la IA lo probó; el humano no). `closed` solo cuando el humano dice que lo usó. `ai-tested` no bloquea el siguiente corte.

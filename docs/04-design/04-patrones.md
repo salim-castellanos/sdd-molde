@@ -8,7 +8,7 @@ Combinaciones de componentes. Card `formularios` apunta aquí.
 2. Error de campo **bajo** el input.
 3. Error de servidor **arriba**.
 4. Submit: una primaria; `submitting` → disabled.
-5. Success = navegación o mensaje neutro (forgot).
+5. Success = aviso flotante que se desvanece solo (el mismo sitio para el error, con otro tono). No un párrafo pegado bajo el botón. El error de **campo** sigue bajo el input.
 
 Estados: `idle` | `submitting` | `field-error` | `server-error` | `success`.
 

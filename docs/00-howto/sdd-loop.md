@@ -49,7 +49,7 @@ La HU es la **fuente del qué**. La spec es un **resultado** (se puede rehacer c
 
 ## Procedimiento por fase
 
-Cualquier agente (Cursor, Kiro, Copilot, Claude Code, …) sigue esto. No hay una copia por herramienta.
+Cualquier agente (Cursor, Kiro, Copilot, Claude Code, …) sigue esto. El del chat es el orquestador (card `orquesta`): abre un rol y lee la mesa del corte antes de avanzar. No hay una copia por herramienta.
 
 ### Compose
 

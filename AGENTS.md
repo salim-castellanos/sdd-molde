@@ -6,7 +6,7 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 ## Qué es este repo
 
-**Molde** (`sdd-molde`): plantilla SDD para un solo agente. Qué es y qué no (BMAD, Spec Kit): `docs/00-howto/que-es.md`. Conocimiento en `docs/`. Software en `apps/`. Una instancia de producto puede vivir en `example/` como **otro git**. Monorepo; cada app puede ser submodule después.
+**Molde** (`sdd-molde`): plantilla SDD para **una persona** que recorre análisis, spec, código y pruebas. El agente del chat es el **orquestador** y abre el rol del paso (card `orquesta`). Qué es y qué no (BMAD, Spec Kit): `docs/00-howto/que-es.md`. Conocimiento en `docs/`. Software en `apps/`. Una instancia de producto puede vivir en `example/` como **otro git**. Monorepo; cada app puede ser submodule después.
 
 `AGENTS.md` anidados (este directorio y los hijos) dicen el propósito del árbol. Card `ide` al agregar una pieza. `.vscode/` es chrome del editor (común a forks de VS Code), no cerebro del agente.
 
@@ -39,6 +39,7 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 | ¿Hueco del molde al usar el ejemplo? | `example/GAPS.md` + card `example` |
 | ¿Qué dolió al ejecutar (puertos, URL, G4 ambiente)? | card `lecciones` |
 | ¿Arrancar, parar o ver si el corte escucha? | card `harness` |
+| ¿Quién hace este paso y qué dejó el rol anterior? | card `orquesta` · mesa del runbook |
 
 ## Loop
 
@@ -73,6 +74,7 @@ La HU es la fuente del qué. La spec se **compone** (y se puede volver a compone
 - No cierres G4 con tests verdes si el humano no tiene una URL del corte que abre.
 - No cierres G4 de un corte con libro sin semilla local ni credenciales en `STATUS.md` **Probar:**. No reintroduzcas un usuario demo en la imagen.
 - No cierres G4 porque el api Compose está healthy si el web (Vite) no escucha. No asumas que el contenedor tiene el código que acabas de escribir: rebuild del servicio tocado.
+- No avances el paso del runbook si la mesa del corte tiene una nota `abierto` que bloquea. Card `orquesta`.
 
 ## Convenciones
 

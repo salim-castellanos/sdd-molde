@@ -26,9 +26,9 @@ Editar un steering o un ADR sin entregar producto.
 1. Lista las HUs del corte (`docs/05-backlog/`).
 2. Diagrama de secuencia: qué capacidad debe **existir** antes de cuál.
 3. Por cada HU, dos pasos de runbook: `compose` y `implement` (más un `analyze` inicial).
-4. Archivo: `docs/07-runbooks/NNN-slug/runbook.md` (template `docs/08-templates/runbook.md`).
+4. Archivo: `docs/07-runbooks/NNN-slug/runbook.md` (template `docs/08-templates/runbook.md`). Al empezar `analyze`, copia `docs/08-templates/mesa.md` a `mesa.md` en esa carpeta.
 5. Status inicial `in-progress`, `step: 1`, `progress: 0`.
-6. Cada vez que un paso termina, se actualiza status, % y descripción. El % es pasos `done` / total.
+6. Cada vez que un paso termina, se actualiza status, % y descripción. El % es pasos `done` / total. No avances si la mesa tiene un `abierto` que bloquea (card `orquesta`).
 7. En el **mismo turno**, card `status`: reescribe `STATUS.md`. Al cerrar el runbook: card `lecciones`.
 
 Activo = paso corriente `compose` o `implement`. `ai-tested` no se carga como cola: ya está desarrollado. El % no elige el siguiente: lo elige **Siguiente** en `STATUS.md`.
@@ -38,5 +38,6 @@ Activo = paso corriente `compose` o `implement`. `ai-tested` no se carga como co
 - El runbook activo, no todos
 - `docs/07-runbooks/README.md` si vas a crear uno
 - `docs/08-templates/runbook.md`
+- La mesa del mismo corte, si existe (`mesa.md`)
 - Tras un cambio: `STATUS.md` (card `status`)
 - Al cerrar: card `lecciones`

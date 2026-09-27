@@ -26,6 +26,7 @@ Instancia Express: `example/docs/03-architecture/09-pruebas.md`.
 ## Trampas (no re-diagnosticar)
 
 - Tests de BD: el helper de env es el **primer** import (ESM carga `config` si importas el service antes). `config` no congela `DATABASE_URL` en el load: usa getter.
+- La batería HTTP no usa la base del libro del humano. Apunta a otra base (en Mistratos, `example_test`). `sync({ force })` ahí no borra lo que la persona ve en la URL.
 - `node --test` en paralelo + `sync({ force })` → `--test-concurrency=1`.
 - Playwright: `toHaveText` / `toContainText`, no `toHaveTextContent` (eso es Testing Library / jest-dom).
 - Playwright `webServer`: si no había Vite, el test lo arranca y **al terminar lo apaga**. Local: deja el dev server corriendo **antes** (`reuseExistingServer`) o relánzalo después. G4 pide la URL del humano, no la del worker de test.
