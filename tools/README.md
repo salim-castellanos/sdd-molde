@@ -7,4 +7,4 @@ node tools/harness.mjs status --profile example/harness.profile.json
 node --test tools/harness.test.mjs
 ```
 
-`status`, `up`, `down` y `web` están en este corte. El servidor MCP no.
+`status`, `up`, `down`, `web` y `origin` están en este corte. `origin` publica el git en Cursor Origin desde la imagen Linux `tools/origin`. No publica la web. El servidor MCP no.

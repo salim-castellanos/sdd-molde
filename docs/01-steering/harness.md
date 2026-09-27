@@ -6,7 +6,7 @@ Herramientas que el agente **llama** para operar el runtime (arrancar, parar, ve
 
 ## Cuándo cargarlo
 
-Arrancar, parar, reiniciar, “no abre localhost”, puerto ocupado, Compose, Vite, semilla, rebuild del api, antes de afirmar que la URL del corte abre.
+Arrancar, parar, reiniciar, “no abre localhost”, puerto ocupado, Compose, Vite, semilla, rebuild del api, antes de afirmar que la URL del corte abre. Publicar el git de la instancia en Origin (`origin.push`).
 
 ## Cuándo no
 

@@ -1,9 +1,11 @@
 import { check, envelope } from "./envelope.mjs";
+import { executeOrigin } from "./origin.mjs";
 import { evaluateStatus, finishDown, finishUp, finishWeb, planDown, planUp, planWeb } from "./runtime.mjs";
 
 const LATER = new Set(["rebuild", "seed", "check", "test"]);
 
 export async function executeTool(name, { profile, project, io }) {
+  if (name === "origin") return executeOrigin(profile, io);
   if (LATER.has(name)) {
     return envelope({
       tool: `runtime.${name}`,

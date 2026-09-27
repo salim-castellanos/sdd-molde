@@ -1,10 +1,11 @@
 import { envelope } from "./lib/envelope.mjs";
 import { executeTool } from "./lib/execute.mjs";
+import { createOriginIo } from "./lib/origin-docker.mjs";
 import { loadProfile } from "./lib/profile.mjs";
 import { composeDown, composeUp, portOpen, snapshotFromDocker } from "./lib/probes.mjs";
 import { spawn } from "node:child_process";
 
-const USAGE = `node tools/harness.mjs <status|up|down|web> --profile <harness.profile.json> [--project nombre]`;
+const USAGE = `node tools/harness.mjs <status|up|down|web|origin> --profile <harness.profile.json> [--project nombre]`;
 
 function parseArgs(argv) {
   const args = { _: [] };
@@ -72,6 +73,7 @@ async function main() {
         startWeb(item);
         await waitForWeb(item);
       },
+      ...createOriginIo(profile),
     },
   });
   console.log(JSON.stringify(result));

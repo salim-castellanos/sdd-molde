@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { assertEnvelope } from "./lib/envelope.mjs";
 import { executeTool } from "./lib/execute.mjs";
+import { findLoginUrl, isCursorOrigin, pageFromRemote } from "./lib/origin.mjs";
 import { loadProfile, parseProfile } from "./lib/profile.mjs";
 import { hostPorts, parseComposeLs, parseDockerPs, upArgs } from "./lib/probes.mjs";
 
@@ -212,6 +213,67 @@ test("parsers de docker y corte 4 aún no existe", async () => {
   const later = await executeTool("rebuild", { profile: profile(), io: memory(snap()) });
   expectShape(later);
   assert.equal(later.error.code, "tool_not_implemented");
+});
+
+function originProfile() {
+  return { ...profile(), baseDir: "C:/example", git: { repo: "mistratos", branch: "master" } };
+}
+
+function originIo(snap, extra = {}) {
+  const calls = [];
+  return {
+    calls,
+    inspect: async () => snap,
+    beginLogin: async () => {
+      calls.push("login");
+      return { loginUrl: "https://cursor.com/login/device" };
+    },
+    push: async () => {
+      calls.push("push");
+      return { ok: true, remoteUrl: "https://origin.cursor.com/salim/mistratos.git", ...extra };
+    },
+  };
+}
+
+test("origin no publica un árbol sucio ni cambia un remoto ajeno", async () => {
+  const dirty = originIo({ dockerOk: true, isRepo: true, branch: "master", dirty: true, remoteUrl: "", authenticated: true });
+  const dirtyResult = await executeTool("origin", { profile: originProfile(), io: dirty });
+  expectShape(dirtyResult);
+  assert.equal(dirtyResult.error.code, "worktree_dirty");
+  assert.deepEqual(dirty.calls, []);
+
+  const github = originIo({
+    dockerOk: true,
+    isRepo: true,
+    branch: "master",
+    dirty: false,
+    remoteUrl: "https://github.com/salim-castellanos/sdd-molde.git",
+    authenticated: true,
+  });
+  const kept = await executeTool("origin", { profile: originProfile(), io: github });
+  expectShape(kept);
+  assert.equal(kept.error.code, "remote_not_origin");
+  assert.equal(isCursorOrigin(kept.data.remoteUrl), false);
+  assert.deepEqual(github.calls, []);
+});
+
+test("origin pide el login y, con sesión, publica la rama del perfil", async () => {
+  const loggedOut = originIo({ dockerOk: true, isRepo: true, branch: "master", dirty: false, remoteUrl: "", authenticated: false });
+  const login = await executeTool("origin", { profile: originProfile(), io: loggedOut });
+  expectShape(login);
+  assert.equal(login.ok, false);
+  assert.equal(login.error.code, "origin_login_required");
+  assert.equal(login.next, "origin.push");
+  assert.equal(findLoginUrl(login.data.loginUrl), login.data.loginUrl);
+  assert.deepEqual(loggedOut.calls, ["login"]);
+
+  const ready = originIo({ dockerOk: true, isRepo: true, branch: "master", dirty: false, remoteUrl: "", authenticated: true });
+  const pushed = await executeTool("origin", { profile: originProfile(), io: ready });
+  expectShape(pushed);
+  assert.equal(pushed.ok, true);
+  assert.equal(pushed.data.page, "https://cursor.com/codebase/salim/mistratos");
+  assert.equal(pageFromRemote("git@origin.cursor.com:salim/mistratos.git"), pushed.data.page);
+  assert.deepEqual(ready.calls, ["push"]);
 });
 
 test("web caído arranca Vite y no un segundo servidor si ya escucha", async () => {

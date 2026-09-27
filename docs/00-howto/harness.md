@@ -35,7 +35,7 @@ Toda herramienta, éxito o fallo, devuelve este objeto. `outputSchema` del adapt
 | `error` | `null` si `ok`. Si no: `code` estable y `message` de una línea. |
 | `next` | La próxima llamada (`runtime.down --project example-local`). Vacío si no hay paso siguiente. No es una frase. |
 
-`code` de error: `port_owned_by_other_project`, `forbidden_project_running`, `stack_down`, `web_not_listening`, `web_is_container`, `unknown_project`, `docker_unavailable`, `compose_mismatch`, `profile_invalid`, `stale_image`, `seed_missing`, `tool_not_implemented`.
+`code` de error: `port_owned_by_other_project`, `forbidden_project_running`, `stack_down`, `web_not_listening`, `web_is_container`, `unknown_project`, `docker_unavailable`, `compose_mismatch`, `profile_invalid`, `stale_image`, `seed_missing`, `tool_not_implemented`, `not_a_git_repo`, `worktree_dirty`, `branch_mismatch`, `remote_not_origin`, `origin_login_required`, `origin_push_failed`.
 
 `runtime.up` no incluye el chequeo del 5173. Puede volver `ok: true` con `next: runtime.web`. Quien afirma que la URL abre es `runtime.status`. `up` no pasa `--build` (eso es `runtime.rebuild`). `down` de un proyecto ajeno usa el compose que declara `docker compose ls`. No mata un proceso que no sea Compose.
 
@@ -82,6 +82,7 @@ Orden de implementación. Las tres primeras son un solo corte: sin ellas el agen
 | `runtime.seed` | El corte deja un libro que se puede clicar | Corre la semilla del perfil contra esa base. No mete un usuario demo en la imagen. `data` repite las cuentas que el perfil declara. |
 | `index.check` | Se tocó una HU o una spec | Envuelve `node docs/02-gates/check-index.mjs`. `ok: false` si hay id duplicado o dos specs `implemented` sin `supersedes`. |
 | `tests.run` | G4, la spec nombró una batería | Api con `--test-concurrency=1`. No declara el web verde si Playwright dejó 5173 muerto: el chequeo `web_not_listening` queda en `checks`. |
+| `origin.push` | Hay que guardar el git de la instancia en Origin | Linux en la imagen `sdd-origin`. El disco del repo es la carpeta del perfil. La sesión vive en el volumen `origin-home-<id>`. No reemplaza un remoto que no sea `origin.cursor.com`. No publica la web. |
 
 Fuera de este harness: login de Facebook, usura, auditoría, el módulo `reports`. Eso es producto (`PARKING.md` o una HU).
 
@@ -118,5 +119,17 @@ Reglas de llamada:
 3. Servidor MCP delgado sobre el CLI. `.cursor/mcp.json` de una línea. Ahí el modelo deja de usar la shell para arrancar.
 4. `runtime.rebuild`, `runtime.seed`, `index.check`, `tests.run`.
 5. G4 nombra el resultado de `runtime.status`. Un curl no lo sustituye.
+
+`origin.push` no espera a esos cortes. Publica el git. La página (`runtime.publish`) sigue sin herramienta.
+
+## Origin
+
+El CLI `origin` es de Linux. En Windows se corre dentro de la imagen `tools/origin/Dockerfile` (`sdd-origin:bookworm`), con la carpeta del perfil montada en `/src`. Un contenedor que se tira al salir no sirve para el login: la sesión queda en el volumen Docker `origin-home-<id>`.
+
+```text
+node tools/harness.mjs origin --profile example/harness.profile.json
+```
+
+El perfil declara `git.repo` y `git.branch`. La primera vez, si no hay sesión, `ok` es false, `error.code` es `origin_login_required` y `data.loginUrl` es el enlace que el humano abre. `next` vuelve a ser `origin.push`. Con sesión, crea el repo si no hay remoto y hace push de esa rama. Si el remoto ya apunta a otro host, no lo toca.
 
 No se adelanta el corte 3 sin el 2: un MCP que no mide el puerto solo cambia el transporte del mismo error.
