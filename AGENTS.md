@@ -10,7 +10,7 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 `AGENTS.md` anidados (este directorio y los hijos) dicen el propósito del árbol. Card `ide` al agregar una pieza. `.vscode/` es chrome del editor (común a forks de VS Code), no cerebro del agente.
 
-`example/` es **otro repositorio git** (producto Mistratos). El molde no lo versiona. El método sigue en `docs/` de esta raíz.
+`example/` es **otro repositorio git** (la instancia de producto). El molde no lo versiona. El método sigue en `docs/` de esta raíz. La idea de esa instancia, cuando existe, está en `example/docs/01-steering/context/product.md`.
 
 ## Carga (obligatorio)
 

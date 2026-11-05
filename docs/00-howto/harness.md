@@ -114,7 +114,7 @@ Reglas de llamada:
 
 ## Cortes
 
-1. Contrato, card, perfil de Mistratos, ADR 0004.
+1. Contrato, card, perfil de la instancia, ADR 0004.
 2. **Hecho.** CLI `runtime.status`, `runtime.up`, `runtime.down`, `runtime.web`. Pruebas en `tools/harness.test.mjs` (sin Docker). MCP no está.
 3. Servidor MCP delgado sobre el CLI. `.cursor/mcp.json` de una línea. Ahí el modelo deja de usar la shell para arrancar.
 4. `runtime.rebuild`, `runtime.seed`, `index.check`, `tests.run`.

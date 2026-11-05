@@ -26,10 +26,10 @@ Instancia Express: `example/docs/03-architecture/09-pruebas.md`.
 ## Trampas (no re-diagnosticar)
 
 - Tests de BD: el helper de env es el **primer** import (ESM carga `config` si importas el service antes). `config` no congela `DATABASE_URL` en el load: usa getter.
-- La batería HTTP no usa la base del libro del humano. Apunta a otra base (en Mistratos, `example_test`). `sync({ force })` ahí no borra lo que la persona ve en la URL.
+- La batería HTTP no usa la base del libro del humano. Apunta a otra base. `sync({ force })` ahí no borra lo que la persona ve en la URL.
 - `node --test` en paralelo + `sync({ force })` → `--test-concurrency=1`.
 - Playwright: `toHaveText` / `toContainText`, no `toHaveTextContent` (eso es Testing Library / jest-dom).
 - Playwright `webServer`: si no había Vite, el test lo arranca y **al terminar lo apaga**. Local: deja el dev server corriendo **antes** (`reuseExistingServer`) o relánzalo después. G4 pide la URL del humano, no la del worker de test.
 - El browser del humano y la batería e2e deben pegarle al **mismo** runtime. Un api de test en otro puerto no prueba la imagen Compose del `:3001`.
 - G4 no cierra si solo pasó `npm test`: hace falta la URL del corte **abierta** (Compose del api ≠ Vite del web).
-- Tras G4, si el humano debe ver el libro: semilla **local** (HTTP al runtime del corte), no un `demo@` en la imagen. Amplía los escenarios del corte. Credenciales en `STATUS.md` **Probar:**. Instancia Mistratos: `example/apps/api` → `npm run seed`.
+- Tras G4, si el humano debe ver el libro: semilla **local** (HTTP al runtime del corte), no un `demo@` en la imagen. Amplía los escenarios del corte. Credenciales en `STATUS.md` **Probar:**. El comando de semilla lo nombra el perfil de la instancia.

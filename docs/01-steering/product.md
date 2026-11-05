@@ -10,6 +10,7 @@ Implementar un endpoint ya especificado. Elegir una librería (eso es `tech`).
 
 ## Si aplica, cargar
 
-- [context/product.md](context/product.md)
+- Si el trabajo es la instancia y existe `example/docs/01-steering/context/product.md`, carga **ese** archivo.
+- Si no, [context/product.md](context/product.md) (arquetipo Clave).
 
-No dupliques el producto aquí.
+No dupliques el producto aquí. El `context/product.md` del molde no describe la instancia.

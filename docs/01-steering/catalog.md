@@ -27,5 +27,6 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | lecciones | al empezar `implement`, cerrar runbook, G4 por ambiente, puerto ocupado, “no abre localhost”, postmortem, “qué aprendimos” | [lecciones.md](lecciones.md) | [../00-howto/lecciones.md](../00-howto/lecciones.md) · en example: `example/LECCIONES.md` |
 | orquesta | quién hace el paso, varios roles, mesa, descubrimientos entre roles, orquestar | [orquesta.md](orquesta.md) | [../00-howto/orquesta.md](../00-howto/orquesta.md) · mesa del runbook activo |
 | harness | arrancar, parar, reiniciar, puerto, Compose, Vite, semilla, rebuild, “no abre localhost”, Origin, publicar el git | [harness.md](harness.md) | [../00-howto/harness.md](../00-howto/harness.md) · en example: `example/harness.profile.json` |
+| enjambre | enjambre, agentes que comparten hallazgos, herramientas del modelo, orquestador y subagentes, Run again, contador de llamadas, corrida terminada con resultado vacío | [enjambre.md](enjambre.md) | [../00-howto/enjambre.md](../00-howto/enjambre.md) |
 
 Constitución y gates no son steering: `docs/02-gates/`. Se leen al cruzar de fase, no al abrir el chat.

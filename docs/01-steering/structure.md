@@ -10,4 +10,6 @@ Escribir aceptación de una HU. Elegir copy de un botón.
 
 ## Si aplica, cargar
 
-- [context/structure.md](context/structure.md)
+- Si el trabajo es la instancia y existe `example/docs/01-steering/context/structure.md`, carga **ese** archivo.
+- Si el trabajo es la instancia y ese archivo no existe, no apliques el árbol de Clave.
+- Si el trabajo es el molde o un fork de la raíz: [context/structure.md](context/structure.md).
