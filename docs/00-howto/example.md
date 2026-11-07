@@ -1,19 +1,22 @@
-# La carpeta `example/`
+# El ecosistema
 
-Mismo árbol que la raíz, **otro git**. En este workspace vive en `example/`; el molde no lo commitea. Se llena recorriendo el loop. El método sigue en este `docs/`.
+`ecosystem/` agrupa las instancias de un mismo ecosistema. No es un repositorio. Cada hijo es **un producto**: su propio git, su `STATUS.md`, sus HUs y su `apps/`. El molde no versiona esos hijos.
 
-| | Molde (raíz) | Instancia (`example/`) |
+```text
+ecosystem/
+├── AGENTS.md
+├── <instancia>/          # un git
+└── <otra-instancia>/     # otro git
+```
+
+| | Molde (raíz) | Instancia (`ecosystem/<instancia>/`) |
 | --- | --- | --- |
-| Método (howto, gates, templates, cards de procedimiento) | `docs/` | Punteros a `../docs/` |
-| Producto (arch, diseño, HUs, specs, runbooks, context) | `docs/` del molde / fork | `example/docs/` (se escribe aquí) |
-| Código | `apps/` | `example/apps/` |
-| Estado | `STATUS.md` | `example/STATUS.md` |
-| Huecos del molde | — | `example/GAPS.md` |
+| Método | `docs/` | Punteros a `../../docs/` |
+| Producto | `docs/` del molde / fork | `docs/` de la instancia |
+| Código | `apps/` | `apps/` de la instancia |
+| Estado | `STATUS.md` | `STATUS.md` de la instancia |
+| Huecos del molde | — | `GAPS.md` de la instancia |
 
-No implementes producto en `example/` sin que quien itera lo pida (arquitectura → … → runbook → compose → implement).
+Un cambio toca una instancia. Si el hueco es del molde, el parche va a `docs/` en el mismo turno (card `example`).
 
-## Devolver una mejora
-
-Card `example`. Gap en `GAPS.md` + parche al molde en el mismo turno.
-
-Dolores de **ejecución** (puertos, URL, Compose huérfano): card `lecciones`, no otra fila GAPS salvo que falte un concepto del molde.
+No implementes producto en una instancia sin que quien itera lo pida.

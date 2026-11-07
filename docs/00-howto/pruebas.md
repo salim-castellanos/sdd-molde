@@ -21,7 +21,7 @@ Una spec solo de api declara “no aplica” en Playwright.
 - G1 / G3 / G4: `docs/02-gates/quality-gates.md`.
 - Card: `docs/01-steering/pruebas.md`.
 
-Instancia Express: `example/docs/03-architecture/09-pruebas.md`.
+Instancia Express: `ecosystem/<instancia>/docs/03-architecture/09-pruebas.md`.
 
 ## Trampas (no re-diagnosticar)
 

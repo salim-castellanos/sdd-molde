@@ -10,9 +10,9 @@ Es un **rollup**. La verdad operativa sigue en el runbook y en el status de cada
 
 “¿En qué vamos?”, “avance”, “informe ejecutivo”, “actualiza el estado”, al **crear** o **cerrar un paso** de runbook.
 
-## Dos STATUS
+## STATUS del molde y de cada instancia
 
-Si existe `example/STATUS.md`, “¿en qué vamos?” del producto es ese archivo. El `STATUS.md` de la raíz es el arquetipo.
+“¿En qué vamos?” de un producto es el `STATUS.md` de `ecosystem/<instancia>/`. Si hay varias instancias y no está claro cuál, se pregunta. El `STATUS.md` de la raíz es el arquetipo.
 
 ## Cola
 

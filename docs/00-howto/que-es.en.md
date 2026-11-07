@@ -4,7 +4,7 @@
 
 **Molde** is a workspace template for **Spec-Driven Development** (SDD). **One person** and an orchestrator share the same tree: `AGENTS.md` + `docs/` + `apps/`. The orchestrator opens the role of the current step (analyze, compose, implement, test). Roles leave notes on the runbook table. Card `orquesta`.
 
-It is not a business product. You write the product when you fork (`docs/01-steering/context/product.md`). In the template, **Clave** is only the smallest example (identity). A separate instance (`example/`, another git) can be another product; it does not ship in the clone.
+It is not a business product. You write the product when you fork (`docs/01-steering/context/product.md`). In the template, **Clave** is only the smallest example (identity). Each real product lives in `ecosystem/<instance>/` (its own git) and does not ship in the clone.
 
 ## In one sentence
 
@@ -45,4 +45,4 @@ Why the tree looks like this: [estado-del-arte.md](estado-del-arte.md). How to r
 - Empty `apps/` slots (api, web, infra) for **your** fork.
 - Templates for stories, specs, runbooks, ADRs.
 
-It does not include a real product’s code. `example/` (if you see it in a development workspace) is **another repository**.
+It does not include a real product’s code. `ecosystem/` (if you see it in a development workspace) groups repositories; each child is **its own git**.

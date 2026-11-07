@@ -13,6 +13,6 @@ Guías para usar este workspace, no para el producto de ejemplo.
 - [Harness](harness.md) — herramientas de runtime (contrato). Card `harness`. El ejecutable todavía no está.
 - Padre de carga: `docs/01-steering/catalog.md`.
 - Informe ejecutivo: [`STATUS.md`](../../STATUS.md) — card `status`.
-- Instancia (mismo árbol): [example.md](example.md) — carpeta `example/`.
+- Ecosistema (varios productos, cada uno su git): [example.md](example.md) — carpeta `ecosystem/`.
 - [Monorepo vs submodules](monorepo-vs-submodules.md) — cómo extraer `apps/*` el día que haga falta.
 - [Estado del arte](estado-del-arte.md) — por qué el arquetipo tiene esta forma.

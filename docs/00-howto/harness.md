@@ -5,10 +5,10 @@ El agente no reescribe Docker ni npm cuando la tarea es operar el proyecto. Llam
 El ejecutable del corte 2 es el CLI. No hay servidor MCP todavía. No se inventa otro `docker compose` en el chat.
 
 ```text
-node tools/harness.mjs status --profile example/harness.profile.json
+node tools/harness.mjs status --profile ecosystem/<instancia>/harness.profile.json
 ```
 
-Desde `example/`: `node ../tools/harness.mjs status --profile harness.profile.json`. `up`, `down` y `web` usan el mismo `--profile`. `down` lleva `--project`. Stdout es el sobre. Exit 0 solo si `ok` es true.
+Desde `ecosystem/<instancia>/`: `node ../../tools/harness.mjs status --profile harness.profile.json`. `up`, `down` y `web` usan el mismo `--profile`. `down` lleva `--project`. Stdout es el sobre. Exit 0 solo si `ok` es true.
 
 ## Estado del arte
 
@@ -127,7 +127,7 @@ Reglas de llamada:
 El CLI `origin` es de Linux. En Windows se corre dentro de la imagen `tools/origin/Dockerfile` (`sdd-origin:bookworm`), con la carpeta del perfil montada en `/src`. Un contenedor que se tira al salir no sirve para el login: la sesión queda en el volumen Docker `origin-home-<id>`.
 
 ```text
-node tools/harness.mjs origin --profile example/harness.profile.json
+node tools/harness.mjs origin --profile ecosystem/<instancia>/harness.profile.json
 ```
 
 El perfil declara `git.repo` y `git.branch`. La primera vez, si no hay sesión, `ok` es false, `error.code` es `origin_login_required` y `data.loginUrl` es el enlace que el humano abre. `next` vuelve a ser `origin.push`. Con sesión, crea el repo si no hay remoto y hace push de esa rama. Si el remoto ya apunta a otro host, no lo toca.

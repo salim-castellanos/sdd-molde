@@ -4,7 +4,7 @@ Para quien no viene de diseño: reglas cortas, no teoría. Estado: Clave v0.
 
 ## Heurísticas que sí aplicamos (Nielsen, recortadas)
 
-1. **Visibilidad de estado** — submitting deshabilita el botón; error se ve.
+1. **Visibilidad de estado** — una acción que tarda muestra un indicador hasta que termina. El control queda deshabilitado. El error se ve.
 2. **Habla el usuario** — “Email o contraseña incorrectos”, no códigos internos en UI. Un 401 de token no se pinta: sesión fuera → login.
 3. **Prevención** — type password; confirm en registro y reset.
 4. **Reconocer, no recordar** — labels visibles, no solo placeholder.

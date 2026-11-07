@@ -4,7 +4,7 @@
 
 **Molde** es una plantilla de workspace para **Spec-Driven Development** (SDD). **Una persona** y un orquestador trabajan el mismo árbol: `AGENTS.md` + `docs/` + `apps/`. El orquestador abre el rol del paso (analizar, componer, implementar, probar). Los roles se dejan notas en la mesa del runbook. Card `orquesta`.
 
-No es un producto de negocio. El producto lo escribes tú al hacer fork (`docs/01-steering/context/product.md`). En el molde, **Clave** es solo el ejemplo mínimo (identidad). Una instancia aparte (`example/`, otro git) puede ser otro producto; no viaja en el clone.
+No es un producto de negocio. El producto lo escribes tú al hacer fork (`docs/01-steering/context/product.md`). En el molde, **Clave** es solo el ejemplo mínimo (identidad). Cada producto real vive en `ecosystem/<instancia>/` (otro git) y no viaja en el clone.
 
 ## En una frase
 
@@ -45,4 +45,4 @@ Detalle de por qué el árbol tiene esta forma: [estado-del-arte.md](estado-del-
 - Huecos de `apps/` (api, web, infra) para **tu** fork.
 - Templates de HU, spec, runbook, ADR.
 
-No incluye el código de un producto real. `example/` (si lo ves en un workspace de desarrollo) es **otro repositorio**.
+No incluye el código de un producto real. `ecosystem/` (si lo ves en un workspace de desarrollo) agrupa repositorios; cada hijo es **otro git**.

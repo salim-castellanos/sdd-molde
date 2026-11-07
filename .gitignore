@@ -36,5 +36,7 @@ tmp/
 .cache/
 /publicaciones/
 
-# Instancia de producto: repo git propio (no se versiona en el molde)
-/example/
+# Instancias de producto: cada hijo de ecosystem/ es un git propio
+/ecosystem/**
+!/ecosystem/AGENTS.md
+!/ecosystem/README.md

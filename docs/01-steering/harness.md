@@ -16,4 +16,4 @@ Redactar una HU. Elegir copy. Elegir una librería (eso es `tech`).
 
 - [docs/00-howto/harness.md](../00-howto/harness.md)
 - En la instancia: `harness.profile.json` y `LECCIONES.md`
-- Llamar: `node tools/harness.mjs status --profile example/harness.profile.json` (desde la raíz del molde). No reescribas el comando Docker.
+- Llamar: `node tools/harness.mjs status --profile ecosystem/<instancia>/harness.profile.json` (desde la raíz del molde). No reescribas el comando Docker.

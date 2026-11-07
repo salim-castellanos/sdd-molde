@@ -13,4 +13,4 @@ Elegir copy. Redactar EARS de una HU (el criterio sí; el archivo de test no).
 - [docs/00-howto/pruebas.md](../00-howto/pruebas.md)
 - Template: sección **Pruebas** de `docs/08-templates/spec.md`
 - Gates G1 / G3 / G4
-- Si el trabajo es `example/`: `example/docs/03-architecture/09-pruebas.md`
+- Si el trabajo es una instancia: `ecosystem/<instancia>/docs/03-architecture/09-pruebas.md`

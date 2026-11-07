@@ -6,18 +6,18 @@ No crees `CLAUDE.md`, `.kiro/steering/`, `.cursorrules`, `GEMINI.md` ni `.github
 
 ## Qué es este repo
 
-**Molde** (`sdd-molde`): plantilla SDD para **una persona** que recorre análisis, spec, código y pruebas. El agente del chat es el **orquestador** y abre el rol del paso (card `orquesta`). Qué es y qué no (BMAD, Spec Kit): `docs/00-howto/que-es.md`. Conocimiento en `docs/`. Software en `apps/`. Una instancia de producto puede vivir en `example/` como **otro git**. Monorepo; cada app puede ser submodule después.
+**Molde** (`sdd-molde`): plantilla SDD para **una persona** que recorre análisis, spec, código y pruebas. El agente del chat es el **orquestador** y abre el rol del paso (card `orquesta`). Qué es y qué no (BMAD, Spec Kit): `docs/00-howto/que-es.md`. Conocimiento en `docs/`. Software en `apps/`. Los productos de un ecosistema viven en `ecosystem/<instancia>/`, cada uno con **su git**. Monorepo dentro de la instancia; cada app puede ser submodule después.
 
 `AGENTS.md` anidados (este directorio y los hijos) dicen el propósito del árbol. Card `ide` al agregar una pieza. `.vscode/` es chrome del editor (común a forks de VS Code), no cerebro del agente.
 
-`example/` es **otro repositorio git** (la instancia de producto). El molde no lo versiona. El método sigue en `docs/` de esta raíz. La idea de esa instancia, cuando existe, está en `example/docs/01-steering/context/product.md`.
+`ecosystem/` agrupa instancias. No es un git. Cada `ecosystem/<instancia>/` es **otro repositorio**. El molde no lo versiona. El método sigue en `docs/` de esta raíz. La idea de una instancia, cuando existe, está en `ecosystem/<instancia>/docs/01-steering/context/product.md`.
 
 ## Carga (obligatorio)
 
 1. Este archivo y `docs/01-steering/catalog.md`.
 2. Solo las cards cuyo trigger coincide. Cada card dice qué doc cargar.
 3. Si entregas producto: el runbook cuyo paso es `compose` o `implement`. `ai-tested` no es la cola. `closed` solo si el humano dice que lo usó. Al avanzar, reescribe `STATUS.md` (card `status`). Al empezar `implement` y al cerrar (G5): card `lecciones`.
-4. “¿En qué vamos?” o “¿qué falta por implementar?” → `STATUS.md`. Si existe `example/STATUS.md`, el producto de este workspace es ese archivo. La cola de desarrollo es su **Siguiente**. `ai-tested` está terminado por la IA y no bloquea otro corte.
+4. “¿En qué vamos?” o “¿qué falta por implementar?” → `STATUS.md` de la instancia en la que se trabaja (`ecosystem/<instancia>/STATUS.md`). Si hay varias y no está claro cuál, pregunta. El `STATUS.md` de la raíz es el arquetipo. La cola de desarrollo es su **Siguiente**. `ai-tested` está terminado por la IA y no bloquea otro corte.
 5. No cargues todas las HUs, specs ni `context/`.
 6. Procedimiento: `docs/00-howto/sdd-loop.md`. Carga fina: card `carga`.
 
@@ -31,12 +31,12 @@ Constitución (`docs/02-gates/constitution.md`) al cruzar de fase.
 | ¿Qué steering abro? | `docs/01-steering/catalog.md` |
 | ¿Qué es una HU / spec / runbook? | cards `historia`, `especificacion`, `runbook` |
 | ¿Specs (se pueden **rehacer** si la HU vive)? | `docs/06-specs/` |
-| ¿En qué vamos / avance ejecutivo? | `STATUS.md` (si existe `example/STATUS.md`, ese; cola = **Siguiente**) |
+| ¿En qué vamos / avance ejecutivo? | `STATUS.md` de la instancia (`ecosystem/<instancia>/`); cola = **Siguiente**. El de la raíz es el arquetipo |
 | ¿En qué paso de entrega? | `docs/07-runbooks/` |
 | ¿Cómo se ejecuta el loop? | `docs/00-howto/sdd-loop.md` |
 | ¿Gates? | `docs/02-gates/` |
-| ¿Código? | `apps/*` (tu fork) · `example/apps/` (instancia, cuando exista spec) |
-| ¿Hueco del molde al usar el ejemplo? | `example/GAPS.md` + card `example` |
+| ¿Código? | `apps/*` (tu fork) · `ecosystem/<instancia>/apps/` (cuando exista spec) |
+| ¿Hueco del molde al usar una instancia? | `GAPS.md` de esa instancia + card `example` |
 | ¿Qué dolió al ejecutar (puertos, URL, G4 ambiente)? | card `lecciones` |
 | ¿Arrancar, parar o ver si el corte escucha? | card `harness` |
 | ¿Quién hace este paso y qué dejó el rol anterior? | card `orquesta` · mesa del runbook |
@@ -70,7 +70,7 @@ La HU es la fuente del qué. La spec se **compone** (y se puede volver a compone
 - No pongas secretos en el repo.
 - No conviertas este archivo en un manual. Si crece, va a `docs/`.
 - No agregues una carpeta muda. Card `ide`.
-- No dejes un arreglo solo en `example/` si el hueco es del molde. `GAPS.md` + parche a `docs/`.
+- No dejes un arreglo solo en `ecosystem/<instancia>/` si el hueco es del molde. `GAPS.md` de esa instancia + parche a `docs/`.
 - No cierres G4 con tests verdes si el humano no tiene una URL del corte que abre.
 - No cierres G4 de un corte con libro sin semilla local ni credenciales en `STATUS.md` **Probar:**. No reintroduzcas un usuario demo en la imagen.
 - No cierres G4 porque el api Compose está healthy si el web (Vite) no escucha. No asumas que el contenedor tiene el código que acabas de escribir: rebuild del servicio tocado.

@@ -11,7 +11,7 @@
 ├── .cursor/                       # punteros opcionales a AGENTS.md / docs/
 ├── docs/                          # conocimiento del molde
 ├── apps/                          # artefactos de tu fork (vacíos)
-└── example/                       # mismo árbol que la raíz; producto aún vacío
+└── ecosystem/                     # agrupa instancias; cada hijo es otro git
 ```
 
 No hay `.kiro/`. Kiro lee `AGENTS.md`. Card `ide`.
@@ -62,7 +62,7 @@ Hueco. No se escribe código hasta que un runbook y una spec lo pidan.
 
 Compose y, más adelante, lo mínimo de provisionamiento.
 
-Una instancia (`example/`) puede definir otra partición y sufijos en `example/docs/01-steering/context/structure.md`. Eso no se copia a este archivo si el molde sigue siendo Fastify/TS.
+Una instancia (`ecosystem/<instancia>/`) puede definir otra partición y sufijos en su `docs/01-steering/context/structure.md`. Eso no se copia a este archivo si el molde sigue siendo Fastify/TS.
 
 ## Nombres
 

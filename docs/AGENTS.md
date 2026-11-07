@@ -15,6 +15,6 @@ Estás en el conocimiento, no en el código. El informe ejecutivo del producto e
 | `07-runbooks/` | Secuencia + estado + % | Una spec larga |
 | `08-templates/` | Formato para copiar | Instancias |
 
-La instancia (mismo árbol, producto propio) vive en `example/` (card `example`). El método no se copia allí.
+Las instancias viven en `ecosystem/<instancia>/` (card `example`). El método no se copia allí.
 
 Al agregar una carpeta de primer nivel aquí: README + fila en este archivo + `docs/README.md` + fila en `catalog.md` si el agente debe saber cuándo cargarla. No crees un steering de Kiro ni un rule de Cursor que no sea puntero.

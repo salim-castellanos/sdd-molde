@@ -75,11 +75,11 @@ THE SHALL ser comprensible al abrir el repo en cualquier IDE que lea `AGENTS.md`
 README o `AGENTS.md` anidado, mapa raíz actualizado, y fila en `catalog.md` si el agente debe saber cuándo cargarlo.
 THE plantilla SHALL NOT dejar carpetas mudas ni leftover de un rename.
 
-## XII. El ejemplo pulimenta el molde
+## XII. La instancia pulimenta el molde
 
-`example/` es el mismo árbol que la raíz, vacío de producto, para recorrer el loop con un problema real.
-THE example SHALL NOT duplicar constitución, howto, templates ni cards de procedimiento (se apuntan al molde).
-WHEN se detecte un hueco al usar el molde desde `example/`,
-THE SHALL registrarse en `example/GAPS.md`
+`ecosystem/<instancia>/` es el mismo árbol que la raíz, con su propio git, para recorrer el loop con un producto real. `ecosystem/` puede tener varias.
+THE instancia SHALL NOT duplicar constitución, howto, templates ni cards de procedimiento (se apuntan al molde).
+WHEN se detecte un hueco al usar el molde desde una instancia,
+THE SHALL registrarse en el `GAPS.md` de esa instancia
 AND el arreglo del molde SHALL hacerse en el mismo trabajo si aplica (`docs/`, templates, `AGENTS.md`).
-THE plantilla SHALL NOT dejar mejoras solo en `example/` cuando el dolor es del arquetipo.
+THE plantilla SHALL NOT dejar mejoras solo en la instancia cuando el dolor es del arquetipo.

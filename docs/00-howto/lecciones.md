@@ -1,15 +1,15 @@
 # Lecciones de ejecución
 
-Inbox del molde. Card: `docs/01-steering/lecciones.md`. No es `example/GAPS.md`.
+Inbox del molde. Card: `docs/01-steering/lecciones.md`. No es el `GAPS.md` de una instancia.
 
-`inbox` = aún no está en un gate/loop. Al empezar un `implement` se leen estas filas y el `LECCIONES.md` de la instancia. `promoted` = la regla ya vive en el destino; no se relee. `instance` = solo la instancia (`example/LECCIONES.md`).
+`inbox` = aún no está en un gate/loop. Al empezar un `implement` se leen estas filas y el `LECCIONES.md` de la instancia. `promoted` = la regla ya vive en el destino; no se relee. `instance` = solo la instancia (`ecosystem/<instancia>/LECCIONES.md`).
 
 Origen de esta tabla: cierre del runbook `001-cuenta` (Mistratos, HU-000) y cortes `002-facebook` / `004-simular`.
 
 | id | Corte | Síntoma | Regla | Destino | Status |
 | --- | --- | --- | --- | --- | --- |
 | orphan-compose | 001-cuenta | `3001` era el api **demo**; el compose nuevo no era el que escuchaba | Un proyecto Compose **nombrado**; `docker compose ls` + `docker ps` antes de asumir el puerto | G4; loop implement | `promoted` |
-| host-port-5432 | 001-cuenta | `password authentication failed` contra `localhost:5432` (Postgres del host + Docker) | El host publica **otro** puerto (aquí 5433). No pelear el 5432 del Windows | `example/LECCIONES.md` | `instance` |
+| host-port-5432 | 001-cuenta | `password authentication failed` contra `localhost:5432` (Postgres del host + Docker) | El host publica **otro** puerto (aquí 5433). No pelear el 5432 del Windows | `ecosystem/bigswarmai/LECCIONES.md` | `instance` |
 | vite-localhost-v6 | 001-cuenta | `http://localhost:5173` no abre: Vite solo en `127.0.0.1` | Vite `server.host: true` (`0.0.0.0`) | G4 URL; `apps/web` vite.config | `promoted` |
 | g4-sin-url | 001-cuenta | Batería verde; el humano no tenía web ni el api del corte | G4 exige URL del corte que **abre**, escrita en `STATUS.md` | G4; card `status` | `promoted` |
 | cluster-sync | 001-cuenta | `CLUSTER=1` + `sequelize.sync` en cada worker → `owners` duplicado / workers en crash loop | Compose local `CLUSTER=0` hasta que el sync sea solo del primary | cfg instancia; compose | `instance` |
@@ -27,3 +27,6 @@ Origen de esta tabla: cierre del runbook `001-cuenta` (Mistratos, HU-000) y cort
 | oauth-glyph | 002-facebook | Icono OAuth `currentColor` se leía apagado; el humano pedía el azulito | Botón secundario del producto; **glifo** con color del proveedor. No pintar el botón entero | 03-componentes; ui-notes | `promoted` |
 | optional-omit | 004-simular | Fecha opcional; vacío debía usar el default del api | Vacío se omite del POST; default en el api | template spec; 04-patrones | `promoted` |
 | enjambre-tablero | — | Agentes en paralelo no ven el hallazgo que el otro acaba de escribir. El contador suma todo en el último nodo. La ejecución «termina» con el resultado vacío | El tablero se relee del almacenamiento antes de cada respuesta. Cada llamada se anota en su nodo. Cerrar no es acertar. El harness tiene versión | [enjambre.md](enjambre.md) | `promoted` |
+| serve-esm-cycle | big-agent-creator | `agent-sdk serve` rechazó `bot/*.ts`: Cannot require() ES Module in a cycle | La carpeta generada es `"type": "module"`, la imagen hace `npm install`, y Ship no arranca si `deliveryCheck` falla | `ecosystem/big-agent-creator/LECCIONES.md` | `instance` |
+| playground-401 | big-agent-creator | Playground `401`: No auth policy admitted this request. Docker no es loopback dentro del contenedor | Sin bearer, el CMD local usa `--allow-anonymous`. **Rebuild** recrea el contenedor para leer `.env`. El valor no entra en la imagen | `ecosystem/big-agent-creator/LECCIONES.md` | `instance` |
+| sandbox-silent | big-agent-creator | Telegram llegó y no hubo respuesta: el sandbox del SDK no corre en esta imagen | El generador no escribe `sandbox: true`. `deliveryCheck` apaga Start si el archivo lo tiene | `ecosystem/big-agent-creator/LECCIONES.md` | `instance` |

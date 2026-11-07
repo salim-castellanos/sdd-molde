@@ -3,7 +3,7 @@
 CLI del harness. Contrato: `docs/00-howto/harness.md`.
 
 ```text
-node tools/harness.mjs status --profile example/harness.profile.json
+node tools/harness.mjs status --profile ecosystem/<instancia>/harness.profile.json
 node --test tools/harness.test.mjs
 ```
 

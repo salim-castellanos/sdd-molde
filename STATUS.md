@@ -6,7 +6,7 @@ delivery_pct: 8
 
 # Estado — Clave
 
-Arquetipo (identidad de ejemplo). Si en este workspace existe `example/STATUS.md`, el producto vivo es ese archivo. La cola del agente es la línea **Siguiente** de allí, no el porcentaje más alto de ningún runbook.
+Arquetipo (identidad de ejemplo). El producto vivo está en `ecosystem/<instancia>/STATUS.md`. La cola del agente es la línea **Siguiente** de esa instancia, no el porcentaje más alto de ningún runbook.
 
 Informe ejecutivo de **este** árbol. **Derivado**: se recalcula desde el catálogo de HUs + specs + runbooks. No se edita a mano “porque sí”.
 

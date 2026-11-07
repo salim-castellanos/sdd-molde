@@ -19,7 +19,7 @@ Redactar una HU. Elegir copy. Un typo.
 1. ¿El síntoma ya está en la tabla (misma causa)? No dupliques.
 2. Si no: **una** fila (síntoma + regla de una línea).
 3. Si volverá a pasar: parche a G4 / loop / card / README **ahora** → `promoted`.
-4. Si es solo de esta instancia: `example/LECCIONES.md` y status `instance`.
+4. Si es solo de esta instancia: `ecosystem/<instancia>/LECCIONES.md` y status `instance`.
 
 ## Si aplica, cargar
 
