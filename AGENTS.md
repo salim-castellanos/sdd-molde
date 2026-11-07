@@ -62,6 +62,7 @@ La HU es la fuente del qué. La spec se **compone** (y se puede volver a compone
 ## No hagas
 
 - No implementes desde una HU ni desde el chat. **SPEC FIRST:** se escribe o se actualiza la spec, después `apps/`. Copy y mensajes también. Constitución I.
+- No leas «todavía no hay HUs» como permiso. Es deuda. El cambio de comportamiento abre la HU y el runbook antes de `apps/`. Si no hay runbook, se crea.
 - No implementes infra ni plataforma (Docker, Compose, cluster) sin documentar antes (arch / ADR).
 - No cierres G4 ni un `implement` porque “se probó a mano”. La spec nombra la batería; esas pruebas tienen que existir y pasar.
 - No crees una spec porque “hay que codear”. Abre o crea un runbook.

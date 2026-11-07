@@ -11,6 +11,7 @@ Si ningún trigger encaja, pregunta. No abras el catálogo entero de docs.
 | id | Trigger | Card | La card puede apuntar a |
 | --- | --- | --- | --- |
 | product | idea de negocio, visión, alcance, actores, “qué es este producto” | [product.md](product.md) | [context/product.md](context/product.md) |
+| linea-base | qué hace hoy la instancia, qué ya está construido, si un cambio toca otra capacidad, retomar sin runbook | [linea-base.md](linea-base.md) | `ecosystem/<instancia>/docs/linea-base.md` |
 | tech | stack, librería, ORM, “podemos usar X” | [tech.md](tech.md) | [context/tech.md](context/tech.md) |
 | structure | dónde va un archivo, nombres, monorepo | [structure.md](structure.md) | [context/structure.md](context/structure.md) |
 | arquitectura | NFR, estilo, IAM, config, C4, ADR | [arquitectura.md](arquitectura.md) | `docs/03-architecture/catalog.md` + **un** archivo |

@@ -47,6 +47,8 @@ La HU es la **fuente del qué**. La spec es un **resultado** (se puede rehacer c
 
 **SPEC FIRST.** Cualquier modificación de comportamiento se escribe o se reabre en la spec **antes** de tocar `apps/`. Copy, labels, mensajes, 401, pantalla: también. De HU o del chat a PR es un defecto de proceso. Typo y lint que no cambian el “qué”: sí, directo.
 
+Una instancia cuyo `STATUS.md` o `CONTEXT.md` diga que no hay épicas ni HUs no está exenta. Esa frase es deuda. El siguiente cambio de comportamiento abre la HU y, si no hay runbook, lo crea. Un MVP no apaga este párrafo.
+
 ## Procedimiento por fase
 
 Cualquier agente (Cursor, Kiro, Copilot, Claude Code, …) sigue esto. El del chat es el orquestador (card `orquesta`): abre un rol y lee la mesa del corte antes de avanzar. No hay una copia por herramienta.

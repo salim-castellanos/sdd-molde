@@ -28,6 +28,8 @@ Fork del producto en la raíz: `apps/` y `docs/` de la raíz. No copies un hijo 
 
 Dolores de runtime (puerto, URL, Compose): card `lecciones` del molde + `LECCIONES.md` de la instancia. GAPS es “faltaba un concepto”.
 
+Si el `STATUS.md` de la instancia dice que no hay HUs, el método sigue en pie. El próximo cambio de comportamiento abre la HU y el runbook en `docs/` de esa instancia antes de tocar su `apps/`.
+
 ## Si aplica, cargar
 
 - `ecosystem/<instancia>/README.md`

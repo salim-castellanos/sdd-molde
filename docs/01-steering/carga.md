@@ -26,4 +26,4 @@ Al empezar un turno, al cambiar de paso del runbook, o cuando no sepas qué arch
 
 ## Si el runbook no existe
 
-No abras specs. Crea o retoma un runbook (`runbook.md`).
+No abras specs. Crea o retoma un runbook (`runbook.md`). Si la pregunta es qué hace ya la instancia, card `linea-base`: un archivo, no el `STATUS.md` entero ni el código.
